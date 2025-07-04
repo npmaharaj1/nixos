@@ -40,9 +40,10 @@
   users.users.nishant = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
-    # packages = with pkgs; [
-    #   tree
-    # ];
+    packages = with pkgs; [
+      tree
+    ];
+    shell = pkgs.zsh;
   };
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
@@ -55,7 +56,7 @@
   ];
 
   programs = {
-    git.enable = true;
+    zsh.enable = true;
 
     hyprland = {
       enable = true;
