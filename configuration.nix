@@ -17,6 +17,20 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+  };
+
+  nix = {
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 10d";
+    };
+    settings.auto-optimise-store = true;
+  };
+
   networking.hostName = "portablemoustachemachine"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -50,6 +64,7 @@
   environment.systemPackages = with pkgs; [
     alacritty
     cachix
+    firefox
     neovim
     tree
     wget

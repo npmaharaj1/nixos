@@ -30,8 +30,17 @@
     enableCompletion = true;
 
     shellAliases = {
-      ls = "ls -a";
+      ls = "ls -a --color=auto";
     };
+  };
+
+  programs.librewolf = {
+    enable = true;
+  };
+
+  programs.zoxide = {
+    enable = true;
+    enableZshIntegration = true;
   };
 
   home.stateVersion = "25.05";
