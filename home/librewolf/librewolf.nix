@@ -24,7 +24,16 @@
 	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/bitwarden-password-manager/latest.xpi";
 	  installation_mode = "force_installed";
 	};
+
+	# Brave Search
+	"BraveSearchExtension@io.Uvera" = {
+	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/brave-search/latest.xpi";
+	  installation_mode = "force_installed";
+	};
       };
+      
+      # Default Search Engine
+      SearchEngines.Default = "Brave search";
     };
   };
 }
