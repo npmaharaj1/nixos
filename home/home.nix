@@ -3,6 +3,10 @@
 {
   imports = [
     ./librewolf/librewolf.nix
+    ./alacritty/alacritty.nix
+    ./git/git.nix
+    ./zoxide/zoxide.nix
+    ./zsh/zsh.nix
   ];
 
   home.username = "nishant";
@@ -15,39 +19,6 @@
     htop
     nnn
   ];
-
-  programs.git = {
-    enable = true;
-    userName = "Nishant";
-    userEmail = "npmaharaj1@protonmail.com";
-  };
-
-  programs.alacritty = {
-    enable = true;
-    # settings = {
-    #   ...
-    # };
-  };
-
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-
-    shellAliases = {
-      ls = "ls -a --color=auto";
-      lsl = "tree";
-      mkdir = "mkdir -p";
-    };
-
-    #sessionVariables = {
-    #  ...
-    #};
-  };
-
-  programs.zoxide = {
-    enable = true;
-    enableZshIntegration = true;
-  };
 
   home.stateVersion = "25.05";
 }
