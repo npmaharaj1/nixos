@@ -1,6 +1,10 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./librewolf/librewolf.nix
+  ];
+
   home.username = "nishant";
   home.homeDirectory = "/home/nishant";
 
@@ -38,10 +42,6 @@
     #sessionVariables = {
     #  ...
     #};
-  };
-
-  programs.librewolf = {
-    enable = true;
   };
 
   programs.zoxide = {
