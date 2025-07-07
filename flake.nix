@@ -14,8 +14,10 @@
 	hyprland.url = "github:hyprwm/Hyprland";
     };
 
-    outputs = { nixpkgs, home-manager, ... } @ inputs: {
+    outputs = { nixpkgs, home-manager, hyprland, ... } @ inputs: {
+        # System Stuff
         nixosConfigurations = {
+
           portablemoustachemachine = nixpkgs.lib.nixosSystem {
 	    system = "x86_64-linux";
 	    specialArgs = { inherit inputs; };
@@ -31,6 +33,7 @@
 		}
 	    ];
 	  };
+
 	};
     };
 }

@@ -7,6 +7,7 @@
     ./git/git.nix
     ./zoxide/zoxide.nix
     ./zsh/zsh.nix
+    ./hypr/hyprland.nix
   ];
 
   home.username = "nishant";

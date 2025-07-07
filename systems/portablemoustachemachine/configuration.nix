@@ -31,6 +31,8 @@
     settings.auto-optimise-store = true;
   };
 
+  home-manager.backupFileExtension = "hm-backup";
+
   networking.hostName = "portablemoustachemachine"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
