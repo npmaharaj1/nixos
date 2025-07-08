@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/keyd.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -54,13 +53,35 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  users.users.nishant = {
-    isNormalUser = true;
-    extraGroups = [ "wheel" "keyd" ];
-    packages = with pkgs; [
-      tree
-    ];
-    shell = pkgs.zsh;
+  services.keyd = {
+    enable = true;
+
+    keyboards = {
+      default = {
+	ids = [ "*" ];
+	
+	settings = {
+
+	  main = {
+	    rightshift = "rightshift";
+	    capslock = "layer(capslock)";
+	  };
+
+	  "capslock:M" = {
+	    h = "left";
+	    j = "down";
+	    k = "up";
+	    l = "right";
+	  };
+
+	};
+	extraConfig = ''
+
+leftshift+rightshift = capslock
+
+	'';
+      };
+    };
   };
 
   environment.etc."libinput/local-overrides.quirks".text = ''
@@ -70,6 +91,15 @@
     AttrKeyboardIntegration=internal
   '';
 
+  users.users.nishant = {
+    isNormalUser = true;
+    extraGroups = [ "wheel" "keyd" ];
+    packages = with pkgs; [
+      tree
+    ];
+    shell = pkgs.zsh;
+  };
+  
   nix.settings.experimental-features = ["nix-command" "flakes"];
   environment.systemPackages = with pkgs; [
     alacritty
