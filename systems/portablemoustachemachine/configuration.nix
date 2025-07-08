@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/keyd.nix
     ];
 
   boot.loader.systemd-boot.enable = true;
@@ -55,12 +56,19 @@
 
   users.users.nishant = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "keyd" ];
     packages = with pkgs; [
       tree
     ];
     shell = pkgs.zsh;
   };
+
+  environment.etc."libinput/local-overrides.quirks".text = ''
+    [Serial Keyboards]
+    MatchUdevType=keyboard
+    MatchName=keyd virtual keyboard
+    AttrKeyboardIntegration=internal
+  '';
 
   nix.settings.experimental-features = ["nix-command" "flakes"];
   environment.systemPackages = with pkgs; [
@@ -80,6 +88,11 @@
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     };
+
+    nh = {
+      enable = true;
+      flake = "/home/nishant/nixos/";
+    };
   };
 
   # Hyprland Cachix
@@ -97,7 +110,9 @@
 
   # List services that you want to enable:
 
-  services.displayManager.ly.enable = true;
+  services = {
+    displayManager.ly.enable = true;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
