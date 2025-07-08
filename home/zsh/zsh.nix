@@ -10,6 +10,10 @@
       lsl = "tree";
       mkdir = "mkdir -p";
     };
+
+    sessionVariables = {
+	NH_FLAKE = "/home/nishant/nixos/";
+    };
   };
 }
 
