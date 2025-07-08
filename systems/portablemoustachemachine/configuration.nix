@@ -106,8 +106,10 @@ leftshift+rightshift = capslock
     brightnessctl
     cachix
     neovim
+    prismlauncher
     tree
     wget
+    zed-editor
   ];
 
   programs = {
