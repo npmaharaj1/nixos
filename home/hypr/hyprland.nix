@@ -170,7 +170,7 @@
 	"$mainMod SHIFT, 7, movetoworkspace, 7"
 	"$mainMod SHIFT, 8, movetoworkspace, 8"
 	"$mainMod SHIFT, 9, movetoworkspace, 9"
-	"$mainMod SHIFT, 10, movetoworkspace, 10"
+	"$mainMod SHIFT, 0, movetoworkspace, 10"
 
 	"$mainMod, S, togglespecialworkspace, magic"
 	"$mainMod, SHIFT S, movetoworkspace, special:magic"
