@@ -15,7 +15,7 @@
       "$mainMod" = "SUPER";
       "$terminal" = "alacritty";
       "$fileManager" = "thunar";
-      "$menu" = "wofi --show drun";
+      "$menu" = "fuzzel";
 
       exec-once = [
        "swww-daemon"
