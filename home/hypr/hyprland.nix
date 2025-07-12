@@ -17,9 +17,10 @@
       "$fileManager" = "thunar";
       "$menu" = "wofi --show drun";
 
-      #exec-once = [
-      #  ...
-      #]
+      exec-once = [
+       "swww-daemon"
+       "waypaper --random"
+      ];
 
       env = [
         "XCURSOR_SIZE, 24"

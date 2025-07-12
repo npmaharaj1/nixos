@@ -8,6 +8,7 @@
     ./zoxide/zoxide.nix
     ./zsh/zsh.nix
     ./hypr/hyprland.nix
+    ./fuzzel/fuzzel.nix
   ];
 
   home.username = "nishant";

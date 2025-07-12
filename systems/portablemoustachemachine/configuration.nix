@@ -97,9 +97,13 @@ leftshift+rightshift = capslock
     alacritty
     brightnessctl
     cachix
+    fuzzel
     neovim
     prismlauncher
+    pywal
+    swww
     tree
+    waypaper
     wget
     zed-editor
   ];

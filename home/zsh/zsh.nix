@@ -14,8 +14,11 @@
     };
 
     sessionVariables = {
-	NH_FLAKE = "/home/nishant/nixos/";
+      NH_FLAKE = "/home/nishant/nixos/";
+      XDG_CONFIG_HOME = "/home/nishant/.config/";
     };
+
+    envExtra = "wal -i $(cat /home/nishant/.cache/swww/eDP-1) -q";
   };
 }
 
