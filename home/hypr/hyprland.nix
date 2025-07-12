@@ -145,7 +145,7 @@
 	"$mainMod ALT, E, exit, "
 	"$mainMod, E, exec, $fileManager"
 	"$mainMod, V, togglefloating, "
-	"$mainMod, S, exec, $menu"
+	"$mainMod, D, exec, $menu"
 
 	"$mainMod, h, movefocus, l"
 	"$mainMod, l, movefocus, r"
