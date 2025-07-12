@@ -66,7 +66,7 @@
       };
 
       animations = {
-	enabled = "yes, please :)";
+	enabled = "no, please :)";
 
       	bezier = [
 	  "easeOutQuint, 0.23, 1, 0.32, 1"
@@ -116,13 +116,16 @@
 	kb_model = "";
 	kb_options = "";
 	kb_rules = "";
-
         follow_mouse = 1;
-
 	sensitivity = 0;
+	accel_profile = "flat";
 
 	touchpad = {
-	  natural_scroll = false;
+	  disable_while_typing = true;
+	  natural_scroll = true;
+	  scroll_factor = 0.5;
+	  middle_button_emulation = false;
+	  clickfinger_behavior = true;
 	};
       };
 
@@ -136,19 +139,17 @@
       };
 
       bind = [
-	"$mainMod, Q, exec, $terminal"
-	"$mainMod, C, killactive, "
-	"$mainMod, M, exit, "
+	"$mainMod, RETURN, exec, $terminal"
+	"$mainMod, W, killactive, "
+	"$mainMod ALT, E, exit, "
 	"$mainMod, E, exec, $fileManager"
 	"$mainMod, V, togglefloating, "
-	"$mainMod, R, exec, $menu"
-	"$mainMod, P, pseudo, "
-	"$mainMod, J, togglesplit, "
+	"$mainMod, S, exec, $menu"
 
-	"$mainMod, left, movefocus, l"
-	"$mainMod, right, movefocus, r"
-	"$mainMod, up, movefocus, u"
-	"$mainMod, down, movefocus, d"
+	"$mainMod, h, movefocus, l"
+	"$mainMod, l, movefocus, r"
+	"$mainMod, k, movefocus, u"
+	"$mainMod, j, movefocus, d"
 
 	"$mainMod, 1, workspace, 1"
 	"$mainMod, 2, workspace, 2"
@@ -171,12 +172,6 @@
 	"$mainMod SHIFT, 8, movetoworkspace, 8"
 	"$mainMod SHIFT, 9, movetoworkspace, 9"
 	"$mainMod SHIFT, 0, movetoworkspace, 10"
-
-	"$mainMod, S, togglespecialworkspace, magic"
-	"$mainMod, SHIFT S, movetoworkspace, special:magic"
-
-	"$mainMod, mouse_down, workspace, e+1"
-	"$mainMod, mouse_up, workspace, e-1"
       ];
 
       bindm = [

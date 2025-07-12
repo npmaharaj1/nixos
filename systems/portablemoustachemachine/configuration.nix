@@ -64,16 +64,8 @@
 
 	  main = {
 	    rightshift = "rightshift";
-	    capslock = "layer(capslock)";
+	    capslock = "layer(meta)";
 	  };
-
-	  "capslock:M" = {
-	    h = "left";
-	    j = "down";
-	    k = "up";
-	    l = "right";
-	  };
-
 	};
 	extraConfig = ''
 
@@ -114,6 +106,7 @@ leftshift+rightshift = capslock
 
   programs = {
     zsh.enable = true;
+    thunar.enable = true;
 
     hyprland = {
       enable = true;
