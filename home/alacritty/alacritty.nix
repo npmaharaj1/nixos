@@ -3,8 +3,10 @@
 {
   programs.alacritty = {
     enable = true;
-    # settings = {
-    #   ...
-    # };
+    settings = {
+      window = {
+        opacity = 0.6;
+      };
+    };
   };
 }
