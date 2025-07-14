@@ -120,6 +120,7 @@
             unzip
             waypaper
             wget
+            wl-clipboard
             zip
     ];
 
