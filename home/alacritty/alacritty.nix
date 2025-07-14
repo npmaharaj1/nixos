@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       window = {
-        opacity = 0.6;
+        opacity = 0.7;
       };
     };
   };
