@@ -134,6 +134,10 @@
                 };
             };
 
+            cursor = {
+              inactive_timeout = 1;
+            };
+
             gestures = {
                 workspace_swipe = false;
             };
