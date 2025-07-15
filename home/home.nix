@@ -10,7 +10,6 @@
     ./hypr/hyprland.nix
     ./hypr/hyprpanel.nix
     ./fuzzel/fuzzel.nix
-    ./tmux/tmux.nix
   ];
 
   home.username = "nishant";

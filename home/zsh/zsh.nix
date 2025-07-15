@@ -14,7 +14,7 @@
     };
 
     sessionVariables = {
-      NH_FLAKE = "/home/nishant/nixos/";
+      NH_FLAKE = "/home/nishant/Projects/nixos/";
       XDG_CONFIG_HOME = "/home/nishant/.config/";
     };
 
