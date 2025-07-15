@@ -21,8 +21,8 @@
     };
 
     outputs = { nixpkgs, home-manager, hyprland, nix-ld, ... } @ inputs: {
-# System Stuff
-        nixosConfigurations = {
+      # System Stuff
+      nixosConfigurations = {
 
             portablemoustachemachine = nixpkgs.lib.nixosSystem {
                 system = "x86_64-linux";
@@ -30,19 +30,17 @@
                 modules = [
                     ./systems/portablemoustachemachine/configuration.nix
 
-                        nix-ld.nixosModules.nix-ld
-                        { programs.nix-ld.dev.enable = true; }
+                    nix-ld.nixosModules.nix-ld
+                    { programs.nix-ld.dev.enable = true; }
 
-                home-manager.nixosModules.home-manager
-                {
-                    home-manager.useGlobalPkgs = true;
-                    home-manager.useUserPackages = true;
+                    home-manager.nixosModules.home-manager {
+                        home-manager.useGlobalPkgs = true;
+                        home-manager.useUserPackages = true;
 
-                    home-manager.users.nishant = import ./home/home.nix;
-                }
+                        home-manager.users.nishant = import ./home/home.nix;
+                    }
                 ];
             };
-
         };
     };
 }

@@ -8,7 +8,9 @@
     ./zoxide/zoxide.nix
     ./zsh/zsh.nix
     ./hypr/hyprland.nix
+    ./hypr/hyprpanel.nix
     ./fuzzel/fuzzel.nix
+    ./tmux/tmux.nix
   ];
 
   home.username = "nishant";
