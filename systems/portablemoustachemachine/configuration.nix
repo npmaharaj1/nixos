@@ -90,8 +90,6 @@
             fd
                 gnumake
                 luarocks
-                maven
-                nodejs_24
                 ripgrep
                 tree
         ];
@@ -109,7 +107,9 @@
             gcc
             grayjay
             lua51Packages.lua
+            maven
             neovim
+            nodejs_24
             openjdk
             prismlauncher
             pwvucontrol

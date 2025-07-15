@@ -146,6 +146,7 @@
 	"$mainMod, E, exec, $fileManager"
 	"$mainMod, V, togglefloating, "
 	"$mainMod, D, exec, $menu"
+    "$mainMod, F, fullscreen"
 
 	"$mainMod, h, movefocus, l"
 	"$mainMod, l, movefocus, r"
