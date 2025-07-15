@@ -99,6 +99,7 @@
     alacritty
       brightnessctl
       cachix
+      cargo
       fuzzel
       gcc
       grayjay
