@@ -5,7 +5,7 @@
     enable = true;
     policies = {
       ExtensionSettings = {
-        "*".installation_mode = "blocked";
+        # "*".installation_mode = "blocked";
 
 	# Dark Reader
 	"addon@darkreader.org" = {
@@ -32,6 +32,14 @@
 
 	# Brave Search
 	"BraveSearchExtension@io.Uvera" = {
+	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/brave-search/latest.xpi";
+	  installation_mode = "force_installed";
+	  private_browsing = true;
+	  default_area = "menupanel";
+	};
+
+	# vimium
+	"{d7742d87-e61d-4b78-b8a1-b469842139fa}" = {
 	  install_url = "https://addons.mozilla.org/firefox/downloads/latest/brave-search/latest.xpi";
 	  installation_mode = "force_installed";
 	  private_browsing = true;
