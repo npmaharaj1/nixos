@@ -3,8 +3,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ];
+    ./hardware-configuration.nix ];
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -102,16 +101,23 @@
       cargo
       fuzzel
       gcc
+      go
       grayjay
       hyprpanel
+      julia
+      libnotify
       lua51Packages.lua
       maven
       neovim
       nodejs_24
       openjdk
+      php
+      php84Packages.composer
       prismlauncher
       pwvucontrol
+      python3
       pywal
+      ruby
       swww
       tree
       tree-sitter
