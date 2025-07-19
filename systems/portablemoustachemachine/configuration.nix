@@ -14,7 +14,14 @@
 
   system.autoUpgrade = {
     enable = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L"
+    ];
     dates = "weekly";
+    randomizedDelaySec = "45min";
   };
 
   nix = {
@@ -106,6 +113,7 @@
       hyprpanel
       julia
       libnotify
+      localsend
       lua51Packages.lua
       maven
       neovim
@@ -132,6 +140,7 @@
     zsh.enable = true;
     thunar.enable = true;
     tmux.enable = true;
+    fcast-receiver.enable = true;
 
     hyprland = {
       enable = true;

@@ -2,14 +2,14 @@
 
 {
   imports = [
-    ../../librewolf/librewolf.nix
-    ../../alacritty/alacritty.nix
-    ../../git/git.nix
-    ../../zoxide/zoxide.nix
-    ../../zsh/zsh.nix
-    ../../hypr/hyprland.nix
-    ../../hypr/hyprpanel.nix
-    ../../fuzzel/fuzzel.nix
+    ../../home/librewolf/librewolf.nix
+    ../../home/alacritty/alacritty.nix
+    ../../home/git/git.nix
+    ../../home/zoxide/zoxide.nix
+    ../../home/zsh/zsh.nix
+    ../../home/hypr/hyprland.nix
+    ../../home/hypr/hyprpanel.nix
+    ../../home/fuzzel/fuzzel.nix
   ];
 
   home.username = "nishant";

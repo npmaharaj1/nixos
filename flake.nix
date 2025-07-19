@@ -13,12 +13,6 @@
 # Hyprland
     hyprland.url = "github:hyprwm/Hyprland";
 
-# nix-ld
-    nix-ld = {
-      url = "github:Mic92/nix-ld";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
 # Plasma Manager
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
@@ -27,7 +21,7 @@
     };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, nix-ld, plasma-manager, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, plasma-manager, ... } @ inputs: 
   let
     username = "nishant";
     system="x86_64-linux";
@@ -41,9 +35,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./systems/portablemoustachemachine/configuration.nix
-
-            nix-ld.nixosModules.nix-ld
-            { programs.nix-ld.dev.enable = true; }
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
@@ -59,9 +50,6 @@
         specialArgs = { inherit inputs; };
         modules = [
           ./systems/moustachemachine/configuration.nix
-
-            nix-ld.nixosModules.nix-ld
-            { programs.nix-ld.dev.enable = true; }
 
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
