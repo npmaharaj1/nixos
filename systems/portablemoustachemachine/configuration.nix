@@ -108,8 +108,8 @@
       cargo
       fuzzel
       gcc
-      go
       grayjay
+      go
       hyprpanel
       julia
       libnotify
@@ -134,13 +134,20 @@
       wget
       wl-clipboard
       zip
+
+#flake
+      inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
 
   programs = {
     zsh.enable = true;
     thunar.enable = true;
     tmux.enable = true;
-    fcast-receiver.enable = true;
+
+    fcast-receiver = {
+      enable = true;
+      openFirewall = true;
+    };
 
     hyprland = {
       enable = true;

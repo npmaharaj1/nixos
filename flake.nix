@@ -19,9 +19,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+
+#Ghostty
+    ghostty = {
+      url = "github:ghostty-org/ghostty";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, plasma-manager, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, plasma-manager, ghostty, ... } @ inputs: 
   let
     username = "nishant";
     system="x86_64-linux";
