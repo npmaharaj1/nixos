@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 
 {
   imports = [
@@ -8,4 +8,8 @@
     ./programs/programs.nix
     ./scheduled/scheduled.nix
   ];
+
+  options = {
+    gamingmode.enable = lib.mkEnableOption "gamingmodeToggle";
+  };
 }

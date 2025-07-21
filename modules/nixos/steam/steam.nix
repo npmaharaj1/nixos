@@ -2,10 +2,10 @@
 
 {
   options = {
-    gamingmode.enable = lib.mkEnableOption "enables gamingmode";
+    steamModule.enable = lib.mkEnableOption "enables steamModule";
   };
 
-  config = lib.mkIf config.gamingmode.enable {
+  config = lib.mkIf config.steamModule.enable {
     programs = {
       gamemode.enable = true;
 
