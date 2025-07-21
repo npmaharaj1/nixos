@@ -1,6 +1,7 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
+
     wayland.windowManager.hyprland = {
         enable = true;
 
@@ -29,7 +30,6 @@
                 "[workspace 10 silent] fcast-receiver"
 
                 "swww-daemon"
-                "waypaper --random"
                 "hyprpanel"
             ];
 
@@ -168,6 +168,11 @@
                     "$mainMod, k, movefocus, u"
                     "$mainMod, j, movefocus, d"
 
+                    "$mainMod ALT, H, movewindow, l"
+                    "$mainMod ALT, J, movewindow, d"
+                    "$mainMod ALT, K, movewindow, u"
+                    "$mainMod ALT, L, movewindow, r"
+
                     "$mainMod, 1, workspace, 1"
                     "$mainMod, 2, workspace, 2"
                     "$mainMod, 3, workspace, 3"
@@ -192,8 +197,8 @@
                     ];
 
             bindm = [
-                "$mainMod, mouse:272, movewindow"
-                    "$mainMod, mouse:273, resizewindow"
+              "$mainMod, mouse:272, movewindow"
+                "$mainMod, mouse:273, resizewindow"
             ];
 
             bindel = [

@@ -2,11 +2,11 @@
 
 {
   imports = [
-    ../../home/librewolf/librewolf.nix
-    ../../home/alacritty/alacritty.nix
-    ../../home/git/git.nix
-    ../../home/zoxide/zoxide.nix
-    ../../home/zsh/zsh.nix
+    ../../modules/home/librewolf/librewolf.nix
+    ../../modules/home/alacritty/alacritty.nix
+    ../../modules/home/git/git.nix
+    ../../modules/home/zoxide/zoxide.nix
+    ../../modules/home/zsh/zsh.nix
   ];
 
   home.username = "nishant";

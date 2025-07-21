@@ -2,15 +2,10 @@
 
 {
   imports = [
-    ../../home/librewolf/librewolf.nix
-    ../../home/alacritty/alacritty.nix
-    ../../home/git/git.nix
-    ../../home/zoxide/zoxide.nix
-    ../../home/zsh/zsh.nix
-    ../../home/hypr/hyprland.nix
-    ../../home/hypr/hyprpanel.nix
-    ../../home/fuzzel/fuzzel.nix
+    ../../modules/home/essentials.nix
+    ../../modules/home/optional.nix
   ];
+
 
   home.username = "nishant";
   home.homeDirectory = "/home/nishant";

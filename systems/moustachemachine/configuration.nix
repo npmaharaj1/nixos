@@ -1,9 +1,14 @@
-{ config,  pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
     [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix ];
+      ./hardware-configuration.nix 
+      # ../../modules/nixos/essentials.nix
+      ../../modules/nixos/optional.nix 
+    ];
+
+  gamingmode.enable = true;
 
 	hardware.graphics = {
 		enable = true;
@@ -191,10 +196,6 @@
       enable = true;
       motherboard = "intel";
     };
-
-		desktopManager.plasma6.enable = true;
-		displayManager.sddm.enable = true;
-		displayManager.sddm.wayland.enable = true;
 	};
 
 # Open ports in the firewall.
