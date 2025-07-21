@@ -5,6 +5,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix 
       # ../../modules/nixos/essentials.nix
+      ../../modules/nixos/essentials.nix
       ../../modules/nixos/optional.nix 
     ];
 
@@ -23,78 +24,8 @@
 		package = config.boot.kernelPackages.nvidiaPackages.beta;
 	};
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 1;
-
-# Use latest kernel. Comment if on nVidia
-  #boot.kernelPackages = pkgs.linuxPackages_latest;
-
-  system.autoUpgrade = {
-    enable = true;
-    dates = "weekly";
-  };
-
-  nix = {
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 7d";
-    };
-    settings.auto-optimise-store = true;
-  };
-
-  home-manager.backupFileExtension = "hm-backup";
 
   networking.hostName = "moustachemachine"; # Define your hostname.
-# Pick only one of the below networking options.
-# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
-# Set your time zone.
-    time.timeZone = "Australia/Canberra";
-
-# Enable CUPS to print documents.
-  services.printing.enable = true;
-
-# Enable sound.
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-# Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
-
-  services.keyd = {
-    enable = true;
-
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-
-        settings = {
-
-          main = {
-            rightshift = "rightshift";
-            capslock = "layer(meta)";
-          };
-        };
-        extraConfig = ''
-
-          leftshift+rightshift = capslock
-
-          '';
-      };
-    };
-  };
-
-  environment.etc."libinput/local-overrides.quirks".text = ''
-    [Serial Keyboards]
-    MatchUdevType=keyboard
-      MatchName=keyd virtual keyboard
-      AttrKeyboardIntegration=internal
-      '';
 
   users.users.nishant = {
     isNormalUser = true;
@@ -165,30 +96,6 @@
       wayland-utils
       python313Packages.ws4py
       ];
-
-  programs = {
-    zsh.enable = true;
-    thunar.enable = true;
-    tmux.enable = true;
-    gamemode.enable = true;
-
-    nh = {
-      enable = true;
-      flake = "/home/nishant/Projects/nixos/";
-    };
-
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true;
-      dedicatedServer.openFirewall = true;
-    };
-  };
-
-  programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
-  };
 
 # List services that you want to enable:
 	services = {
