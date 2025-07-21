@@ -3,6 +3,6 @@
 {
   imports = [
     ./plasma/plasma.nix
-    ./steam.steam.nix
+    ./steam/steam.nix
   ];
 }
