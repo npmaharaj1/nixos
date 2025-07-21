@@ -32,7 +32,7 @@
 
   users.users.nishant = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "keyd" ];
+    extraGroups = [ "wheel" "keyd" "audio" ];
     packages = with pkgs; [
       fd
         gnumake
