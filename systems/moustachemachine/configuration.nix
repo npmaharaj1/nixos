@@ -1,14 +1,15 @@
-{ pkgs, config, , ... }:
+{ pkgs, config, ... }:
 
 {
   imports =
     [ 
       ./hardware-configuration.nix 
+
       ../../modules/nixos/essentials.nix
       ../../modules/nixos/optional.nix 
     ];
 
-  gamingMode.enable = true;
+  gamingMode.enable = false;
   
 	hardware.graphics = {
 		enable = true;

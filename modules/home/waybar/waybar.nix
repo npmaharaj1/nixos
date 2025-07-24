@@ -1,82 +1,87 @@
 { pkgs, lib, config, ... }:
 
 {
-  programs.waybar = {
-    enable = true;
+  options = {
+    waybarModule.enable = lib.mkEnableOption "enables waybarModule";
+  };
 
-    settings = {
-      mainBar = {
-        layer = "top";
-        position = "top";
-        modules-left = [
-          "hyprland/workspaces"
-        ];
-        modules-center = ["clock"];
-        modules-right = [
-          "pulseaudio"
+  config = lib.mkIf config.waybarModule.enable {
+    programs.waybar = {
+      enable = true;
+
+      settings = {
+        mainBar = {
+          layer = "top";
+          position = "top";
+          modules-left = [
+            "hyprland/workspaces"
+          ];
+          modules-center = ["clock"];
+          modules-right = [
+            "pulseaudio"
             "battery"
             "network"
             "tray"
-        ];
-        "hyprland/workspaces" = {
-          format = "{name} = {icon}";
-          format-icons = {
-            active = "";
-            default = "";
+          ];
+          "hyprland/workspaces" = {
+            format = "{name} = {icon}";
+            format-icons = {
+              active = "";
+              default = "";
+            };
           };
-        };
-        tray = {
-          icon-size = 21;
-          spacing = 10;
-        };
-        clock = {
-          timezone = "Australia/Canberra";
-          tooltip-format = "<big>{ =%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-          format = "{:%d - %H:%M}";
-        };
-        network = {
-          format-wifi = "󰤢 ";
-          format-ethernet = "󰈀 ";
-          format-disconnected = "󰤠 ";
-          interval = 5;
-          tooltip = false;
-        };
-        cpu = {
-          interval = 1;
-          format = "  {icon0}{icon1}{icon2}{icon3} {usage =>2}%";
-          format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
-        };
-        memory = {
-          interval = 30;
-          format = "  {used =0.1f}G/{total =0.1f}G";
-        };
-        pulseaudio = {
-          format = "{icon} {volume}%";
-          format-muted = "";
-          format-icons = {
-            default = ["" "" " "];
+          tray = {
+            icon-size = 21;
+            spacing = 10;
           };
-          on-click = "pavucontrol";
-        };
-        "custom/lock" = {
-          tooltip = false;
-          on-click = "sh -c '(sleep 0.5s; hyprlock)' & disown";
-          format = "";
-        };
-        "custom/stream_status" = {
-          format = "{text}";
-          exec = "~/.local/scripts/stream_status";
-          interval = 5;
-          return-type = "json";
-          tooltip = true;
-        };
-        later = {
-          format = "<span class='icon'>{icon}</span> <span class='text'>{text}</span>";
+          clock = {
+            timezone = "Australia/Canberra";
+            tooltip-format = "<big>{ =%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+            format = "{:%d - %H:%M}";
+          };
+          network = {
+            format-wifi = "󰤢 ";
+            format-ethernet = "󰈀 ";
+            format-disconnected = "󰤠 ";
+            interval = 5;
+            tooltip = false;
+          };
+          cpu = {
+            interval = 1;
+            format = "  {icon0}{icon1}{icon2}{icon3} {usage =>2}%";
+            format-icons = ["▁" "▂" "▃" "▄" "▅" "▆" "▇" "█"];
+          };
+          memory = {
+            interval = 30;
+            format = "  {used =0.1f}G/{total =0.1f}G";
+          };
+          pulseaudio = {
+            format = "{icon} {volume}%";
+            format-muted = "";
+            format-icons = {
+              default = ["" "" " "];
+            };
+            on-click = "pavucontrol";
+          };
+          "custom/lock" = {
+            tooltip = false;
+            on-click = "sh -c '(sleep 0.5s; hyprlock)' & disown";
+            format = "";
+          };
+          "custom/stream_status" = {
+            format = "{text}";
+            exec = "~/.local/scripts/stream_status";
+            interval = 5;
+            return-type = "json";
+            tooltip = true;
+          };
+          later = {
+            format = "<span class='icon'>{icon}</span> <span class='text'>{text}</span>";
+          };
         };
       };
-    };
 
-    style = ''
+      style = ''
       * {
         font-family: JetbrainsMono Nerd Font;
         font-size: 12px;
@@ -209,6 +214,7 @@
           margin-left: 1rem;
           border-radius: 5px;
         }
-        '';
+      '';
+    };
   };
 }
