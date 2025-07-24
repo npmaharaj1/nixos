@@ -3,10 +3,15 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-    ../../modules/nixos/tmux/tmux.nix
-    ../../modules/nixos/essentials.nix
+      ./hardware-configuration.nix
+
+      ../../modules/nixos/tmux/tmux.nix
+
+      ../../modules/nixos/essentials.nix
+      ../../modules/nixos/optional.nix 
     ];
+
+  gamingMode.enable = false;
 
   services.logind.extraConfig = ''
      HandlePowerKey=ignore
@@ -95,7 +100,6 @@
 # List services that you want to enable:
 
   services = {
-    displayManager.ly.enable = true;
     upower.enable = true;
   };
 

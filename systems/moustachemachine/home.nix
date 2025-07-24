@@ -2,12 +2,6 @@
 
 {
   imports = [
-    # ../../modules/home/librewolf/librewolf.nix
-    # ../../modules/home/alacritty/alacritty.nix
-    # ../../modules/home/git/git.nix
-    # ../../modules/home/zoxide/zoxide.nix
-    # ../../modules/home/zsh/zsh.nix
-
     ../../modules/home/essentials.nix
     ../../modules/home/optional.nix 
   ];
