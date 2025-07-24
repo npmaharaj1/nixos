@@ -5,7 +5,12 @@
     enable = true;
     settings = {
       window = {
-        opacity = 0.7;
+        opacity = 0.8;
+      };
+
+      colors.primary = {
+        background = "#000000";
+        foreground = "#ffffff";
       };
 
       font = {

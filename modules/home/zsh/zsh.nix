@@ -20,7 +20,7 @@
       XDG_CONFIG_HOME = "/home/nishant/.config/";
     };
 
-    envExtra = "wal -i $(cat /home/nishant/.cache/swww/eDP-1) -q";
+    envExtra = "wal -i $(cat /home/nishant/.cache/swww/*) -q";
   };
 }
 
