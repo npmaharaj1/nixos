@@ -1,4 +1,4 @@
 #!/bin/sh
 
 mkdir -p ~/.config/waypaper
-cp ./waypaper/config.ini ~/.config/waypaper/config.ini
+cp ~/Projects/nixos/modules/home/templates/waypaper/config.ini ~/.config/waypaper/config.ini
