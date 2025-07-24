@@ -1,10 +1,9 @@
-{ pkgs, config, lib, ... }:
+{ pkgs, config, , ... }:
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix 
-      # ../../modules/nixos/essentials.nix
       ../../modules/nixos/essentials.nix
       ../../modules/nixos/optional.nix 
     ];

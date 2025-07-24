@@ -3,87 +3,19 @@
 {
   imports =
     [ # Include the results of the hardware scan.
-    ./hardware-configuration.nix ];
+    ./hardware-configuration.nix
+    ../../modules/nixos/tmux/tmux.nix
+    ../../modules/nixos/essentials.nix
+    ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.loader.timeout = 1;
+  services.logind.extraConfig = ''
+     HandlePowerKey=ignore
+  '';
 
 # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  system.autoUpgrade = {
-    enable = true;
-    flake = inputs.self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L"
-    ];
-    dates = "weekly";
-    randomizedDelaySec = "45min";
-  };
-
-  nix = {
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 7d";
-    };
-    settings.auto-optimise-store = true;
-  };
-
-  home-manager.backupFileExtension = "hm-backup";
-
   networking.hostName = "portablemoustachemachine"; # Define your hostname.
-# Pick only one of the below networking options.
-# networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-    networking.networkmanager.enable = true;  # Easiest to use and most distros use this by default.
-
-# Set your time zone.
-    time.timeZone = "Australia/Canberra";
-
-# Enable CUPS to print documents.
-  services.printing.enable = true;
-
-# Enable sound.
-  services.pipewire = {
-    enable = true;
-    pulse.enable = true;
-  };
-
-# Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
-
-  services.keyd = {
-    enable = true;
-
-    keyboards = {
-      default = {
-        ids = [ "*" ];
-
-        settings = {
-
-          main = {
-            rightshift = "rightshift";
-            capslock = "layer(meta)";
-          };
-        };
-        extraConfig = ''
-
-          leftshift+rightshift = capslock
-
-          '';
-      };
-    };
-  };
-
-  environment.etc."libinput/local-overrides.quirks".text = ''
-    [Serial Keyboards]
-    MatchUdevType=keyboard
-      MatchName=keyd virtual keyboard
-      AttrKeyboardIntegration=internal
-      '';
 
   users.users.nishant = {
     isNormalUser = true;
@@ -110,7 +42,10 @@
       gcc
       grayjay
       go
+      heroic
       hyprpanel
+      jetbrains.idea-community
+      jdk24
       julia
       libnotify
       localsend
@@ -118,7 +53,6 @@
       maven
       neovim
       nodejs_24
-      openjdk
       php
       php84Packages.composer
       prismlauncher
@@ -140,10 +74,6 @@
       ];
 
   programs = {
-    zsh.enable = true;
-    thunar.enable = true;
-    tmux.enable = true;
-
     fcast-receiver = {
       enable = true;
       openFirewall = true;
@@ -153,31 +83,19 @@
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
       portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+      };
+
+      nix-ld = {
+        enable = true;
     };
 
-    nh = {
-      enable = true;
-      flake = "/home/nishant/nixos/";
-    };
-  };
-
-# Hyprland Cachix
-  nix.settings = {
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-  };
-
-  programs.mtr.enable = true;
-  programs.gnupg.agent = {
-    enable = true;
-    enableSSHSupport = true;
   };
 
 # List services that you want to enable:
 
   services = {
     displayManager.ly.enable = true;
+    upower.enable = true;
   };
 
 # Open ports in the firewall.

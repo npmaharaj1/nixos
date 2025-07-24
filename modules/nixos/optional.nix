@@ -2,7 +2,8 @@
 
 {
   imports = [
-    ./plasma/plasma.nix
+    ./displaymanager/ly.nix
+    ./displaymanager/plasma.nix
     ./steam/steam.nix
   ];
 
@@ -11,7 +12,8 @@
   };
 
   config = {
-    steamModule.enable = lib.mkIf config.gamingMode.enable true;
+    lyModule.enable = lib.mkIf config.gamingMode.enable false;
     plasmaModule.enable = lib.mkIf config.gamingMode.enable true;
+    steamModule.enable = lib.mkIf config.gamingMode.enable true;
   };
 }

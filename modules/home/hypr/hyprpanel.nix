@@ -2,7 +2,7 @@
 
 {
   programs.hyprpanel = {
-    enable = true;
+    # enable = true;
 
     settings = {
       theme = {

@@ -10,6 +10,7 @@
 
             monitor = [
                 "eDP-1, 1920x1200@60, 0x0, 1"
+                "DP-7, 2560x1440@144, 0x-1440, 1"
                 "HDMI-A-1, 4096x2160@60, 0x-2160, 1"
                 "monitor = , preferred, auto, auto"
             ];
@@ -22,15 +23,15 @@
             workspace = [
               "2, monitor:eDP-1"
               "10, monitor:HDMI-A-1, default:true"
+              "10, monitor:DP-7, default:true"
             ];
 
             exec-once = [
                 "[workspace 1 silent] alacritty"
                 "[workspace 2 silent] librewolf"
-                "[workspace 10 silent] fcast-receiver"
 
                 "swww-daemon"
-                "hyprpanel"
+                "waybar"
             ];
 
             env = [

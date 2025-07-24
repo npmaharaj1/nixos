@@ -7,6 +7,7 @@
       window = {
         opacity = 0.7;
       };
+
       font = {
         size = 12.0;
         normal = {
@@ -14,6 +15,17 @@
           style = "Regular";
         };
       };
+
+      # terminal.shell = {
+      #   program = "/run/current-system/sw/bin/tmux";
+      #   "args" = [
+      #     "new-session"
+      #     "-A"
+      #     "-D"
+      #     "-s"
+      #     "zsh"
+      #   ];
+      # };
     };
   };
 }

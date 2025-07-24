@@ -1,10 +1,19 @@
-{ pkgs, lib, config, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 {
-  system.autoUpgrade = {
+    system.autoUpgrade = {
     enable = true;
+    allowReboot = true;
+    flake = inputs.self.outPath;
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L"
+    ];
     dates = "weekly";
+    randomizedDelaySec = "45min";
   };
+
 
   nix = {
     gc = {

@@ -7,17 +7,19 @@
 # Set your time zone.
     time.timeZone = "Australia/Canberra";
 
-# Enable CUPS to print documents.
-  services.printing.enable = true;
+    services = {
+      # Enable sound
+      pipewire = {
+        enable = true;
+        alsa.enable = true;
+        alsa.support32Bit = true;
+        pulse.enable = true;
+      };
 
-# Enable sound.
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
+      printing.enable = true;
 
-# Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
+      # Enable touchpad support (enabled default in most desktopManager).
+      libinput.enable = true;
+    };
+
 }
