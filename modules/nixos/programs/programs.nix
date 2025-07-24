@@ -11,15 +11,6 @@
       flake = "/home/nishant/Projects/nixos/";
     };
 
-    ssh = {
-      extraConfig = ''
-        Host github
-          Hostname github.com
-          IdentityFile /home/nishant/.ssh/id_rsa
-          IdentitiesOnly yes
-      '';
-    };
-
     mtr.enable = true;
     gnupg.agent = {
       enable = true;
