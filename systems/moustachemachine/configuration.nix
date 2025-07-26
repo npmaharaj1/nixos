@@ -25,7 +25,16 @@
 	};
 
 
-  networking.hostName = "moustachemachine"; # Define your hostname.
+  networking = {
+    hostName = "moustachemachine"; # Define your hostname.
+    networkmanager.insertNameservers = [ 
+      "1.1.1.1"
+      "1.0.0.1"
+    ];
+    dhcpcd.extraConfig = ''
+      nohook resolv.conf
+    '';
+  };
 
   users.users.nishant = {
     isNormalUser = true;
@@ -56,6 +65,7 @@
       heroic
       julia
       libnotify
+      localsend
       lua51Packages.lua
       maven
       neovim
