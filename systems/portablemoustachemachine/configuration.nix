@@ -48,6 +48,7 @@
       grayjay
       go
       heroic
+      hplip
       hyprpanel
       jetbrains.idea-community
       jdk24
@@ -93,7 +94,7 @@
   };
 
 # Open ports in the firewall.
-# networking.firewall.allowedTCPPorts = [ ... ];
+networking.firewall.allowedTCPPorts = [ 9100 ];
 # networking.firewall.allowedUDPPorts = [ ... ];
 # Or disable the firewall altogether.
 # networking.firewall.enable = false;
