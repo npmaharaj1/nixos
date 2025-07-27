@@ -87,7 +87,6 @@
       swww
       tree
       tree-sitter
-      ungoogled-chromium
       unzip
       usb-modeswitch
       waypaper
