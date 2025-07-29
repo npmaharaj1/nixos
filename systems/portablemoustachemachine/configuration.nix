@@ -46,6 +46,7 @@
       fuzzel
       gcc
       grayjay
+      grim
       go
       heroic
       hplip
