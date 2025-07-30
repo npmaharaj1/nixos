@@ -57,16 +57,19 @@
       brightnessctl
       cachix
       cargo
+      ffmpeg
       fuzzel
       gcc
       git
       go
       grayjay
+      grim
       heroic
       hplip
       hyprshot
       julia
       libnotify
+      live-server
       localsend
       lua51Packages.lua
       maven
@@ -77,6 +80,7 @@
       oversteer
       php
       php84Packages.composer
+      pnpm
       prismlauncher
       protonup-qt
       pwvucontrol
@@ -89,6 +93,7 @@
       tree-sitter
       unzip
       usb-modeswitch
+      vesktop
       waypaper
       wget
       wl-clipboard

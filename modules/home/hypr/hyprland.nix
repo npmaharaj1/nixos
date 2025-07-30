@@ -34,6 +34,7 @@
         exec-once = [
           "[workspace 1 silent] alacritty"
           "[workspace 2 silent] librewolf"
+          "[workspace 10 silent] vesktop"
 
           "swww-daemon"
           "waybar"
