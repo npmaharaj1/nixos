@@ -102,6 +102,7 @@
       kdePackages.kcalc
       kdePackages.kcharselect
       kdePackages.kcolorchooser
+      kdePackages.kdenlive
       kdePackages.kolourpaint
       kdePackages.ksystemlog
       kdePackages.qtwebsockets
