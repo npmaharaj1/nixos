@@ -57,6 +57,7 @@
         brightnessctl
         cachix
         cargo
+        clang
         ffmpeg
         fuzzel
         gcc
