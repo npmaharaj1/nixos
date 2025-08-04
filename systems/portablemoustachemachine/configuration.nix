@@ -74,6 +74,7 @@
         pywal
         ruby
         swww
+        tesseract
         tree
         tree-sitter
         unzip
