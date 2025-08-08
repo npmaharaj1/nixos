@@ -13,7 +13,8 @@
 
                 monitor = [
                     "eDP-1, 1920x1200@60, 0x0, 1"
-                    "DP-7, 2560x1440@144, 0x-1440, 1"
+                    "DP-7, 2560x1440@144, 0x-1440, 1, bitdepth, 10"
+                    "DP-3, 2560x1440@165, 0x-1440, 1, bitdepth, 10"
                     "HDMI-A-1, 4096x2160@60, 0x-2160, 1"
                     "monitor = , preferred, auto, auto"
                 ];
