@@ -14,7 +14,7 @@
             dev-commit = "git add . && git commit -m 'automated commit' && git push origin master";
             nurse = "nh os switch && ~/Projects/nixos/modules/home/templates/start.sh";
 
-            gcupload = "hyprctl dispatch exec '[workspace 2] thunar .'";
+            gcupload = "hyprctl dispatch exec '[workspace 2] thunar .' && echo 'done'";
         };
 
         sessionVariables = {
