@@ -58,6 +58,7 @@
         cachix
         cargo
         clang
+        containerlab
         ffmpeg
         fuzzel
         gcc
@@ -122,6 +123,10 @@
             enable = true;
             motherboard = "intel";
         };
+    };
+
+    virtualisation = {
+        docker.enable = true;
     };
 
     # Open ports in the firewall.
