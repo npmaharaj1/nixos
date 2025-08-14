@@ -69,6 +69,7 @@
         heroic
         hplip
         hyprshot
+        jq
         julia
         libnotify
         live-server
