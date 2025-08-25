@@ -50,7 +50,6 @@
         clang
         fuzzel
         gcc
-        grayjay
         grim
         go
         heroic
@@ -88,18 +87,7 @@
         llvmPackages_latest.libllvm
         llvmPackages_latest.libcxx
         llvmPackages_latest.clang
-
-        #flake
-        inputs.ghostty.packages.${pkgs.stdenv.hostPlatform.system}.default
     ];
-
-    programs = {
-        fcast-receiver = {
-            enable = true;
-            openFirewall = true;
-        };
-
-    };
 
     # List services that you want to enable:
 
