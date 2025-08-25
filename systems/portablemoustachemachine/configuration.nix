@@ -67,6 +67,7 @@
         nodejs_24
         php
         php84Packages.composer
+	pnpm
         prismlauncher
         pwvucontrol
         python3
