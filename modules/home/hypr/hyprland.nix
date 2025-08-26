@@ -32,7 +32,7 @@
                 exec-once = [
                     "[workspace 1 silent] alacritty"
                     "[workspace 2 silent] librewolf"
-                    "[workspace 3 silent] Grayjay"
+                    "[workspace 3 silent] freetube"
                     "[workspace 10 silent] vesktop"
 
                     "swww-daemon"
