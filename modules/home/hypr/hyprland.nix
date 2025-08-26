@@ -43,7 +43,17 @@
                 env = [
                     "XCURSOR_SIZE, 24"
                     "HYPRCURSOR_SIZE, 24"
+                    "QT_QPA_PLATFORMTHEME,qt6ct" # Dark mode for QT
                 ];
+
+                exec = [
+                    #for libadwaita gtk4 apps you can use this command:
+                "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"   # for GTK4 apps
+                "gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'"   # for GTK3 apps
+
+                ];
+
+
 
                 general = {
                     gaps_in = 5;

@@ -9,7 +9,7 @@
         Hostname ssh.github.com
         User npmaharaj1 
         Port 443
-        IdentityFile ~/.ssh/id_rsa
+        IdentityFile ~/.ssh/id_rsa-github
         IdentitiesOnly yes
     '';
   };

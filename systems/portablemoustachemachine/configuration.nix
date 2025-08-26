@@ -65,9 +65,10 @@
         maven
         neovim
         nodejs_24
+        nwg-look
         php
         php84Packages.composer
-	pnpm
+        pnpm
         prismlauncher
         pwvucontrol
         python3
