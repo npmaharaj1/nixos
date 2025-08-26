@@ -11,6 +11,13 @@
         Port 443
         IdentityFile ~/.ssh/id_rsa-github
         IdentitiesOnly yes
+
+      Host alpine-docker
+        Hostname 10.1.1.135
+        User root
+        Port 22
+        IdentityFile ~/.ssh/id_rsa-lightweight
+        IdentitiesOnly yes
     '';
   };
 }
