@@ -73,7 +73,6 @@
         julia
         libnotify
         live-server
-        localsend
         lua51Packages.lua
         maven
         neovim
