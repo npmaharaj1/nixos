@@ -8,6 +8,5 @@
     ./ssh/ssh.nix
     ./zoxide/zoxide.nix
     ./zsh/zsh.nix
-    ./freetube/freetube.nix
   ]; 
 }

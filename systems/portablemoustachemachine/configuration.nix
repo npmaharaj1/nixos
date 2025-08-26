@@ -50,6 +50,7 @@
         clang
         fuzzel
         gcc
+        glib
         grim
         go
         heroic
