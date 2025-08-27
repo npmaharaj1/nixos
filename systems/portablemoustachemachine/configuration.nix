@@ -14,7 +14,7 @@
     gamingMode.enable = false;
 
     services.logind.extraConfig = ''
-     HandlePowerKey=ignore
+         HandlePowerKey=ignore
     '';
 
     # Use latest kernel.
@@ -42,7 +42,10 @@
     nixpkgs.config.allowUnfree = true;
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
+
     environment.systemPackages = with pkgs; [
+        unstable.freetube
+
         alacritty
         brightnessctl
         cachix

@@ -6,6 +6,7 @@
     ./waybar/waybar.nix
     ./fuzzel/fuzzel.nix
     ./gtk/gtk.nix
+    ./hypr/hyprlock.nix
   ];
 
   options = {
@@ -13,7 +14,8 @@
   };
 
   config = {
-    hyprModule.enable = lib.mkIf (!config.gamingMode.enable) true;
+    hyprlandModule.enable = lib.mkIf (!config.gamingMode.enable) true;
+    hyprlockModule.enable = lib.mkIf (!config.gamingMode.enable) true;
     waybarModule.enable = lib.mkIf (!config.gamingMode.enable) true;
     fuzzelModule.enable = lib.mkIf (!config.gamingMode.enable) true;
     gtkModule.enable = lib.mkIf (!config.gamingMode.enable) true;
