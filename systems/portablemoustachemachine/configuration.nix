@@ -49,7 +49,6 @@
         cachix
         cargo
         clang
-        docker
         fuzzel
         gcc
         glib
