@@ -12,6 +12,13 @@
         IdentityFile ~/.ssh/id_rsa-github
         IdentitiesOnly yes
 
+      Host proxmox
+        Hostname 10.1.1.196
+        User root
+        Port 22
+        IdentityFile ~/.ssh/id_rsa-proxmox
+        IdentitiesOnly yes
+
       Host alpine-docker
         Hostname 10.1.1.135
         User root

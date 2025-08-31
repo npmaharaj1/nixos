@@ -49,6 +49,7 @@
         cachix
         cargo
         clang
+        ffuf
         fuzzel
         gcc
         glib
