@@ -25,6 +25,13 @@
         Port 22
         IdentityFile ~/.ssh/id_rsa-lightweight
         IdentitiesOnly yes
+
+      Host pihole
+        Hostname 10.1.1.90
+        User root
+        Port 22
+        IdentityFile ~/.ssh/id_rsa-pihole
+        IdentitiesOnly yes
     '';
   };
 }

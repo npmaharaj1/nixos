@@ -24,7 +24,15 @@
         bluetooth.enable = true;
     };
 
-    networking.hostName = "portablemoustachemachine"; # Define your hostname.
+    networking = {
+        hostName = "portablemoustachemachine"; # Define your hostname.
+        networkmanager.insertNameservers = [ 
+            "10.1.1.90"
+        ];
+        dhcpcd.extraConfig = ''
+      nohook resolv.conf
+        '';
+    };
 
     users.users.nishant = {
         isNormalUser = true;

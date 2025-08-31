@@ -28,8 +28,8 @@
     networking = {
         hostName = "moustachemachine"; # Define your hostname.
         networkmanager.insertNameservers = [ 
+            "10.1.1.140"
             "1.1.1.1"
-            "1.0.0.1"
         ];
         dhcpcd.extraConfig = ''
       nohook resolv.conf
