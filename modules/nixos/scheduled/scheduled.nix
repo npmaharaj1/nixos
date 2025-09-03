@@ -2,27 +2,27 @@
 
 {
     system.autoUpgrade = {
-    enable = true;
-    allowReboot = true;
-    flake = inputs.self.outPath;
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L"
-    ];
-    dates = "weekly";
-    randomizedDelaySec = "45min";
-  };
-
-
-  nix = {
-    gc = {
-      automatic = true;
-      dates = "daily";
-      options = "--delete-older-than 7d";
+        enable = true;
+        allowReboot = false;
+        flake = inputs.self.outPath;
+        flags = [
+            "--update-input"
+            "nixpkgs"
+            "-L"
+        ];
+        dates = "weekly";
+        randomizedDelaySec = "45min";
     };
-    settings.auto-optimise-store = true;
-  };
 
-  home-manager.backupFileExtension = "hm-backup";
+
+    nix = {
+        gc = {
+            automatic = true;
+            dates = "daily";
+            options = "--delete-older-than 7d";
+        };
+        settings.auto-optimise-store = true;
+    };
+
+    home-manager.backupFileExtension = "hm-backup";
 }

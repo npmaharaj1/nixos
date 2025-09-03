@@ -64,7 +64,6 @@
         gcc
         git
         go
-        grayjay
         grim
         heroic
         hplip
