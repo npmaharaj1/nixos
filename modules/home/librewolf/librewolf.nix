@@ -47,14 +47,12 @@
                 };
             };
 
-            # Default Search Engine
-            SearchEngines.Default = "Brave search";
-
             Preferences = {
                 sidebar.verticalTabs = true;
             };
 
         };
+
 
     };
 
