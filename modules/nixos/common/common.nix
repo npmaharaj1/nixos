@@ -21,6 +21,7 @@
         # Enable touchpad support (enabled default in most desktopManager).
         libinput.enable = true;
 
+        twingate.enable = true;
     };
 
     virtualisation = {

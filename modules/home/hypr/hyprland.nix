@@ -38,6 +38,7 @@
                     "swww-daemon"
                     "waybar"
                     "openrgb --startminimized"
+                    "waypaper --random"
                 ];
 
                 env = [

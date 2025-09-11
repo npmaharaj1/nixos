@@ -19,12 +19,27 @@
         IdentityFile ~/.ssh/id_rsa-proxmox
         IdentitiesOnly yes
 
-      Host alpine-docker
+      Host alpine
         Hostname 10.1.1.140
         User root
         Port 22
         IdentityFile ~/.ssh/id_rsa-lightweight
         IdentitiesOnly yes
+
+      Host rpi
+        Hostname 10.176.120.160
+        User nishant
+        Port 22
+        IdentityFile ~/.ssh/id_rsa-rpi
+        IdentitiesOnly yes
+
+      Host uptime
+        Hostname 10.1.1.34
+        User nishant
+        Port 22
+        IdentityFile ~/.ssh/id_rsa-uptime
+        IdentitiesOnly yes
+
     '';
   };
 }

@@ -83,9 +83,11 @@
         pwvucontrol
         python3
         pywal
+        rpi-imager
         ruby
         swww
         tesseract
+        tigervnc
         tree
         tree-sitter
         unzip
@@ -93,6 +95,7 @@
         waypaper
         wget
         wl-clipboard
+        zathura
         zip
 
         llvmPackages_latest.lldb
