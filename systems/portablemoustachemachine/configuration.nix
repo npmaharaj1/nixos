@@ -66,9 +66,11 @@
         heroic
         hplip
         hyprpanel
+        hyprshot
         jetbrains.idea-community
         jdk24
         julia
+        libglibutil
         libnotify
         live-server
         lua51Packages.lua

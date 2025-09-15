@@ -13,6 +13,7 @@
         thunar.enable = true;
         tmux.enable = true;
         localsend.enable = true;
+        obs-studio.enable = true;
 
         nh = {
             enable = true;
