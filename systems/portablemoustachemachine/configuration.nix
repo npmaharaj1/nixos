@@ -100,6 +100,9 @@
         zathura
         zip
 
+        kdePackages.kdenlive
+        libsForQt5.umbrello
+
         llvmPackages_latest.lldb
         llvmPackages_latest.libllvm
         llvmPackages_latest.libcxx
