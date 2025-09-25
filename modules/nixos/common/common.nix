@@ -22,6 +22,11 @@
         libinput.enable = true;
 
         twingate.enable = true;
+        gvfs = {
+            enable = true;
+            package = lib.mkForce pkgs.gnome.gvfs;
+        };
+        samba.enable = true;
     };
 
     virtualisation = {

@@ -94,6 +94,7 @@
         tree-sitter
         unzip
         vesktop
+        vimv
         waypaper
         wget
         wl-clipboard

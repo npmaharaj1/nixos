@@ -34,7 +34,7 @@
         IdentitiesOnly yes
 
       Host uptime
-        Hostname 10.1.1.34
+        Hostname 10.1.1.172
         User nishant
         Port 22
         IdentityFile ~/.ssh/id_rsa-uptime
