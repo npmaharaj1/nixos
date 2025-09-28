@@ -92,6 +92,7 @@
         tokyonight-gtk-theme
         tree
         tree-sitter
+        ungoogled-chromium
         unzip
         usb-modeswitch
         vesktop
@@ -122,6 +123,7 @@
             enable = true;
             motherboard = "intel";
         };
+        blueman.enable = true;
     };
 
 

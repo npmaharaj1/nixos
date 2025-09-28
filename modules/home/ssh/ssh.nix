@@ -25,6 +25,13 @@
         Port 22
         IdentityFile ~/.ssh/id_rsa-lightweight
         IdentitiesOnly yes
+      
+      Host debian
+        Hostname 10.1.1.157
+        User root
+        Port 22
+        IdentityFile ~/.ssh/id_rsa-debian
+        IdentitiesOnly yes
 
       Host rpi
         Hostname 10.176.120.160
