@@ -73,6 +73,7 @@
         live-server
         lua51Packages.lua
         maven
+        mcpelauncher-ui-qt
         neovim
         nodejs_24
         openjdk
