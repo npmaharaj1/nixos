@@ -19,6 +19,8 @@
         sessionVariables = {
             NH_FLAKE = "/home/nishant/Projects/nixos/";
             XDG_CONFIG_HOME = "/home/nishant/.config/";
+            SSH_AUTH_SOCK = "/home/nishant/.bitwarden-ssh-agent.sock";
+            GTK2_RC_FILES = "";
         };
 
         envExtra = "wal -i $(cat /home/nishant/.cache/swww/*) -q";

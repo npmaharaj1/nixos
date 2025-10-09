@@ -14,6 +14,8 @@
         tmux.enable = true;
         localsend.enable = true;
         obs-studio.enable = true;
+        
+        ssh.startAgent = true;
 
         nh = {
             enable = true;
@@ -21,11 +23,6 @@
         };
 
         mtr.enable = true;
-        gnupg.agent = {
-            enable = true;
-            enableSSHSupport = true;
-        };
-
         hyprland = {
             enable = true;
             package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
