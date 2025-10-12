@@ -9,7 +9,7 @@
             ../../modules/nixos/optional.nix 
         ];
 
-    gamingMode.enable = true;
+    gamingMode.enable = false;
 
     hardware.graphics = {
         enable = true;
