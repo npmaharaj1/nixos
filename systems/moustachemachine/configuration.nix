@@ -27,9 +27,10 @@
 
     networking = {
         hostName = "moustachemachine"; # Define your hostname.
-        # networkmanager.insertNameservers = [ 
-        #     "1.1.1.1"
-        # ];
+        networkmanager.insertNameservers = [ 
+            "10.1.1.241"
+            "10.1.1.242"
+        ];
         dhcpcd.extraConfig = ''
       nohook resolv.conf
         '';
