@@ -6,17 +6,8 @@
 
     boot = {
 
-        resumeDevice = "/dev/disk/by-uuid/80cdbd3a-5694-4f49-ac7b-b21b753a6429";
-
         plymouth = {
             enable = true;
-            # theme = "glitch";
-            # themePackages = with pkgs; [
-            #     # By default we would install all themes
-            #     (adi1090x-plymouth-themes.override {
-            #         selected_themes = [ "glitch" ];
-            #     })
-            # ];
         };
 
         # Enable "Silent boot"

@@ -17,6 +17,8 @@
         SuspendState=mem
     '';
 
+    boot.resumeDevice = "/dev/disk/by-uuid/80cdbd3a-5694-4f49-ac7b-b21b753a6429";
+
     gamingMode.enable = false;
 
     services.logind.extraConfig = ''
