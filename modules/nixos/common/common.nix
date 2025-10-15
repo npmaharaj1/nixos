@@ -8,6 +8,9 @@
     time.timeZone = "Australia/Canberra";
 
     services = {
+        nfs.server.enable = true;
+        rpcbind.enable = true;
+
         # Enable sound
         pipewire = {
             enable = true;

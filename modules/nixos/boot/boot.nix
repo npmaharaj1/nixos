@@ -19,8 +19,6 @@
             # ];
         };
 
-        # resumeDevice = "/.swapfile";
-
         # Enable "Silent boot"
         consoleLogLevel = 3;
         initrd.verbose = false;

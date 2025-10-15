@@ -84,11 +84,13 @@
         lua51Packages.lua
         maven
         neovim
+        nfs-utils
         nodejs_24
         nwg-look
         php
         php84Packages.composer
         pnpm
+        powerline-go
         prismlauncher
         pwvucontrol
         python3
