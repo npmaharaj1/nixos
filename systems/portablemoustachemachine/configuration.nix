@@ -11,6 +11,12 @@
             ../../modules/nixos/optional.nix 
         ];
 
+    powerManagement.enable = true;
+    systemd.sleep.extraConfig = ''
+        HibernateDelaySec=30m
+        SuspendState=mem
+    '';
+
     gamingMode.enable = false;
 
     services.logind.extraConfig = ''
@@ -53,6 +59,7 @@
 
     environment.systemPackages = with pkgs; [
         alacritty
+        bitwarden
         brightnessctl
         cachix
         cargo
@@ -72,6 +79,7 @@
         julia
         libglibutil
         libnotify
+        linuxHeaders
         live-server
         lua51Packages.lua
         maven
@@ -87,6 +95,7 @@
         pywal
         rpi-imager
         ruby
+        sqlite
         swww
         tesseract
         tigervnc
