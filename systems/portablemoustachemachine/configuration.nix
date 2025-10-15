@@ -26,10 +26,6 @@
     # Use latest kernel.
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
-    hardware = {
-        bluetooth.enable = true;
-    };
-
     networking = {
         hostName = "portablemoustachemachine"; # Define your hostname.
         # networkmanager.insertNameservers = [ 

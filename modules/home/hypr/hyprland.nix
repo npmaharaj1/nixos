@@ -39,6 +39,7 @@
                     "waybar"
                     "openrgb --startminimized"
                     "waypaper --random"
+                    "bitwarden"
                 ];
 
                 env = [

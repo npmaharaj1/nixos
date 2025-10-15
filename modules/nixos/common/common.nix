@@ -7,6 +7,8 @@
     # Set your time zone.
     time.timeZone = "Australia/Canberra";
 
+    hardware.bluetooth.enable = true;
+
     services = {
         nfs.server.enable = true;
         rpcbind.enable = true;
