@@ -38,8 +38,8 @@
                     "swww-daemon"
                     "waybar"
                     "openrgb --startminimized"
-                    "waypaper --random"
                     "bitwarden"
+                    "xcreensaver -nosplash"
                 ];
 
                 env = [

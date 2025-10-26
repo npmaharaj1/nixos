@@ -8,6 +8,7 @@
     time.timeZone = "Australia/Canberra";
 
     hardware.bluetooth.enable = true;
+    hardware.graphics.enable32Bit = true;
 
     services = {
         nfs.server.enable = true;
