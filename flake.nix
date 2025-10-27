@@ -20,9 +20,15 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    wluma = {
+        url = "github:max-baz/wluma";
+        inputs.nixpkgs.follows = "nixpkgs";
+        inputs.home-manager.follows = "home-manager";
+    };
+
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, plasma-manager, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, hyprland, plasma-manager, wluma, ... } @ inputs: 
   let
     username = "nishant";
     system="x86_64-linux";

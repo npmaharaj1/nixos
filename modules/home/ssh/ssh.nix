@@ -6,6 +6,11 @@
         enable = true;
 
         extraConfig = ''
+            Host github.com
+                Hostname ssh.github.com
+                User npmaharaj1
+                Port 443
+            
             Host proxmox
                 Hostname 10.1.1.196
                 User root

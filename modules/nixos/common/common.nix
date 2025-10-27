@@ -25,7 +25,6 @@
 
         # Enable touchpad support (enabled default in most desktopManager).
         libinput.enable = true;
-        power-profiles-daemon.enable = true;
 
         logind = {
             lidSwitch = "hibernate";

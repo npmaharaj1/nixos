@@ -38,13 +38,13 @@
                     default_area = "menupanel";
                 };
 
-                # Clippy
-                "{7ff3aad6-c5f9-4024-bf2d-c16a0b477e91}" = {
-                    install_url = "https://addons.mozilla.org/firefox/downloads/latest/clippy-assistant/latest.xpi";
-                    installation_mode = "force_installed";
-                    private_browsing = true;
-                    default_area = "menupanel";
-                };
+                # # Clippy
+                # "{7ff3aad6-c5f9-4024-bf2d-c16a0b477e91}" = {
+                #     install_url = "https://addons.mozilla.org/firefox/downloads/latest/clippy-assistant/latest.xpi";
+                #     installation_mode = "force_installed";
+                #     private_browsing = true;
+                #     default_area = "menupanel";
+                # };
 
             };
 

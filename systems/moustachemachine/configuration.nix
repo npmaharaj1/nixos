@@ -83,6 +83,7 @@
         oversteer
         php
         php84Packages.composer
+        pipe-viewer
         pnpm
         prismlauncher
         protonup-qt
