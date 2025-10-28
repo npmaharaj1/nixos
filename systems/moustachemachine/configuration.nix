@@ -64,6 +64,7 @@
         ffmpeg
         fuzzel
         gcc
+        gimp3
         git
         go
         grim

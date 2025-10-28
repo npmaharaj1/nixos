@@ -17,7 +17,7 @@
                 Port 22
 
             Host rpi
-                Hostname 10.1.1.174
+                Hostname 10.1.1.172
                 User root
                 Port 22
 
