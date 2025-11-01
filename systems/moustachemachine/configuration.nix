@@ -54,6 +54,7 @@
     nix.settings.experimental-features = ["nix-command" "flakes"];
     environment.systemPackages = with pkgs; [
         alacritty
+        audacity
         bitwarden-desktop
         brightnessctl
         cachix
@@ -63,6 +64,7 @@
         ffmpeg
         fuzzel
         gcc
+        gimp3
         git
         go
         grim
@@ -76,6 +78,7 @@
         lua51Packages.lua
         maven
         mcpelauncher-ui-qt
+        mpv
         neovim
         nodejs_24
         openjdk
@@ -100,8 +103,10 @@
         unzip
         usb-modeswitch
         vesktop
+        vlc
         waypaper
         wget
+        wine
         wl-clipboard
         zip
 

@@ -38,6 +38,7 @@
                     "waybar"
                     "openrgb --startminimized"
                     "bitwarden"
+                    "xcreensaver -nosplash"
                 ];
 
                 env = [
