@@ -74,6 +74,7 @@
         heroic
         hplip
         hyprshot
+        jetbrains.idea-community
         jq
         julia
         libnotify
