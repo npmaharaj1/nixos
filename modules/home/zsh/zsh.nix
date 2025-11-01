@@ -27,5 +27,10 @@
         };
 
         envExtra = "wal -i $(cat /home/nishant/.cache/swww/*) -q";
+
+        oh-my-zsh = {
+            enable = true;
+            theme = "agnoster";
+        };
     };
 }
