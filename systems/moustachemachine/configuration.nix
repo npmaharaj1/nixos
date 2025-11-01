@@ -50,6 +50,9 @@
     };
 
     nixpkgs.config.allowUnfree = true;
+    nixpkgs.config.permittedInsecurePackages = [
+        "mbedtls-2.28.10"
+    ];
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
     environment.systemPackages = with pkgs; [
@@ -77,6 +80,7 @@
         live-server
         lua51Packages.lua
         maven
+        mbedtls
         mcpelauncher-ui-qt
         mpv
         neovim
@@ -99,7 +103,6 @@
         tokyonight-gtk-theme
         tree
         tree-sitter
-        ungoogled-chromium
         unzip
         usb-modeswitch
         vesktop
