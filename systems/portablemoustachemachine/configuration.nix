@@ -97,6 +97,7 @@
         rpi-imager
         ruby
         sqlite
+        sqlitestudio
         swww
         tesseract
         tigervnc
