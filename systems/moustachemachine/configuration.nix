@@ -1,5 +1,4 @@
 { pkgs, config, ... }:
-
 {
     imports =
         [ 
@@ -102,6 +101,7 @@
         sof-firmware
         swww
         tokyonight-gtk-theme
+        trash-cli
         tree
         tree-sitter
         unzip
