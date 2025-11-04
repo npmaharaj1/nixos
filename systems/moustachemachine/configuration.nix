@@ -1,6 +1,4 @@
-{ pkgs, config, ... }:
-{
-    imports =
+{ pkgs, config, ... }: { imports =
         [ 
             ./hardware-configuration.nix 
 
@@ -22,7 +20,6 @@
         #nvidiaSettings = true;
         package = config.boot.kernelPackages.nvidiaPackages.beta;
     };
-
 
     networking = {
         hostName = "moustachemachine"; # Define your hostname.
@@ -61,9 +58,11 @@
         brightnessctl
         cachix
         cargo
+        cifs-utils
         clang
         containerlab
         ffmpeg
+        file
         fuzzel
         gcc
         gimp3
@@ -77,6 +76,7 @@
         jq
         julia
         libnotify
+        libreoffice
         live-server
         lua51Packages.lua
         maven
