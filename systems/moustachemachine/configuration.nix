@@ -132,11 +132,11 @@
 
     # List services that you want to enable:
     services = {
+        blueman.enable = true;
         hardware.openrgb = {
             enable = true;
             motherboard = "intel";
         };
-        blueman.enable = true;
     };
 
 
