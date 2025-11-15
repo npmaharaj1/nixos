@@ -41,6 +41,11 @@
                 User root
                 Port 22
 
+            Host kodi
+                Hostname 10.1.1.81
+                User kodi
+                Port 22
+
 
         '';
     };
