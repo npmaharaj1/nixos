@@ -55,6 +55,20 @@
 
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
+    programs = {
+        nix-ld.enable = true;
+        nix-ld.libraries = with pkgs; [
+            icu
+        ];
+        gamemode.enable = true;
+
+        steam = {
+            enable = true;
+            remotePlay.openFirewall = true;
+            dedicatedServer.openFirewall = true;
+        };
+    };
+
     environment.systemPackages = with pkgs; [
         alacritty
         bitwarden
@@ -72,6 +86,8 @@
         hplip
         hyprpanel
         hyprshot
+        icu
+        icu.dev
         jetbrains.idea-community
         jdk24
         julia
@@ -94,7 +110,6 @@
         pwvucontrol
         python3
         pywal
-        rpi-imager
         ruby
         sqlite
         sqlitestudio
