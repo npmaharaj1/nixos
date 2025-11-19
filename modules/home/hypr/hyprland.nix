@@ -32,7 +32,7 @@
                 exec-once = [
                     "[workspace 1 silent] alacritty"
                     "[workspace 2 silent] librewolf"
-                    "[workspace 10 silent] vesktop"
+                    "[workspace 10 silent] legcord"
 
                     "swww-daemon"
                     "waybar"
@@ -241,7 +241,7 @@
                 ];
 
                 windowrulev2 = [
-                    "workspace 10 silent, class:^(vesktop)$"
+                    "workspace 10 silent, class:^(legcord)$"
                 ];
             };
         };

@@ -91,6 +91,7 @@
         jetbrains.idea-community
         jdk24
         julia
+        legcord
         libglibutil
         libnotify
         linuxHeaders
@@ -120,7 +121,6 @@
         tree
         tree-sitter
         unzip
-        vesktop
         vimv
         waypaper
         wget
