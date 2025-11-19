@@ -34,7 +34,7 @@
 
     users.users.nishant = {
         isNormalUser = true;
-        extraGroups = [ "wheel" "keyd" "audio" ];
+        extraGroups = [ "wheel" "keyd" "audio" "games" ];
         packages = with pkgs; [
             fd
             gnumake
@@ -75,6 +75,7 @@
         jetbrains.idea-community
         jq
         julia
+        legcord
         libnotify
         libreoffice
         live-server
@@ -91,6 +92,7 @@
         php
         php84Packages.composer
         pipe-viewer
+        piper
         pnpm
         prismlauncher
         protonup-qt
@@ -106,7 +108,6 @@
         tree-sitter
         unzip
         usb-modeswitch
-        vesktop
         vlc
         waypaper
         wget
@@ -123,6 +124,7 @@
         kdePackages.qtwebsockets
         kdePackages.sddm-kcm
         kdePackages.wallpaper-engine-plugin
+        kdePackages.xdg-desktop-portal-kde
         kdiff3
         hardinfo2
         haruna
@@ -133,6 +135,7 @@
     # List services that you want to enable:
     services = {
         blueman.enable = true;
+        ratbagd.enable = true;
         hardware.openrgb = {
             enable = true;
             motherboard = "intel";
