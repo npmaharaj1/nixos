@@ -113,7 +113,6 @@
         wget
         wine
         wl-clipboard
-        xdg-desktop-portal
         zip
 
         kdePackages.kcalc
