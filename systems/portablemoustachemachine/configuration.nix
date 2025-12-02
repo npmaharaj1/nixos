@@ -30,9 +30,12 @@
 
     networking = {
         hostName = "portablemoustachemachine"; # Define your hostname.
-        # networkmanager.insertNameservers = [ 
-        #     "10.1.1.90"
-        # ];
+          networkmanager.insertNameservers = [ 
+            "10.1.1.241"
+            "10.1.1.242"
+            "1.1.1.1"
+            "1.0.0.1"
+          ];
         dhcpcd.extraConfig = ''
       nohook resolv.conf
         '';
@@ -134,6 +137,9 @@
         llvmPackages_latest.libllvm
         llvmPackages_latest.libcxx
         llvmPackages_latest.clang
+
+        unrar
+        vlc
     ];
 
     # List services that you want to enable:
