@@ -70,7 +70,7 @@
 
     environment.systemPackages = with pkgs; [
         alacritty
-        bitwarden
+        bitwarden-desktop
         brightnessctl
         cachix
         cargo
@@ -89,7 +89,6 @@
         icu
         icu.dev
         jetbrains.idea-community
-        jdk24
         julia
         legcord
         libglibutil
@@ -102,6 +101,7 @@
         nfs-utils
         nodejs_24
         nwg-look
+        openjdk
         php
         php84Packages.composer
         pipe-viewer
@@ -127,8 +127,6 @@
         wl-clipboard
         zathura
         zip
-
-        libsForQt5.umbrello
 
         llvmPackages_latest.lldb
         llvmPackages_latest.libllvm
