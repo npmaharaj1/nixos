@@ -21,10 +21,6 @@
 
     gamingMode.enable = false;
 
-    services.logind.extraConfig = ''
-         HandlePowerKey=ignore
-    '';
-
     # Use latest kernel.
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
@@ -79,6 +75,7 @@
         cachix
         cargo
         clang
+        feishin
         ffuf
         fuzzel
         gcc
