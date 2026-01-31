@@ -28,10 +28,9 @@
         libinput.enable = true;
 
         logind = {
-            lidSwitch = "hibernate";
+            settings.Login.HandleLidSwitch = "hibernate";
         };
 
-        twingate.enable = true;
         gvfs = {
             enable = true;
             package = lib.mkForce pkgs.gnome.gvfs;

@@ -33,4 +33,7 @@
             enable = true;
         };
     };
+
+    # Required for ssh-agent
+    services.gnome.gcr-ssh-agent.enable = false;
 }

@@ -3,6 +3,7 @@
 {
   imports = [
     ./hypr/hyprland.nix
+    ./swaywm/swaywm.nix
     ./waybar/waybar.nix
     ./fuzzel/fuzzel.nix
     ./gtk/gtk.nix
@@ -15,6 +16,7 @@
 
   config = {
     hyprlandModule.enable = lib.mkIf (!config.gamingMode.enable) true;
+    swaywmModule.enable = lib.mkIf (!config.gamingMode.enable) true;
     # hyprlockModule.enable = lib.mkIf (!config.gamingMode.enable) true;
     waybarModule.enable = lib.mkIf (!config.gamingMode.enable) true;
     fuzzelModule.enable = lib.mkIf (!config.gamingMode.enable) true;

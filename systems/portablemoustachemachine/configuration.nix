@@ -88,12 +88,11 @@
         hyprshot
         icu
         icu.dev
-        jetbrains.idea-community
-        julia
         legcord
         libglibutil
         libnotify
         linuxHeaders
+        libreoffice
         live-server
         lua51Packages.lua
         maven
@@ -101,6 +100,7 @@
         nfs-utils
         nodejs_24
         nwg-look
+        obsidian
         openjdk
         php
         php84Packages.composer
