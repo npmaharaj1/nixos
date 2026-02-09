@@ -31,7 +31,22 @@
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
 
-          home-manager.users.nishant = import ./systems/portablemoustachemachine/home.nix;
+          home-manager.users.nishant = import ./systems/parent-home.nix;
+        }
+        ];
+      };
+
+      moustachemachine = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./systems/moustachemachine/configuration.nix
+
+        home-manager.nixosModules.home-manager {
+          home-manager.useGlobalPkgs = true;
+          home-manager.useUserPackages = true;
+
+          home-manager.users.nishant = import ./systems/parent-home.nix;
         }
         ];
       };

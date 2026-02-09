@@ -1,7 +1,7 @@
-{ lib, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-    imports = [ ../../modules/home ];
+    imports = [ ../modules/home ];
 
 
     home.username = "nishant";
