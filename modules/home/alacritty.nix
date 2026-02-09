@@ -4,9 +4,9 @@
   programs.alacritty = {
     enable = true;
     settings = {
-      window = {
-        opacity = 0.6;
-      };
+      # window = {
+      #   opacity = 0.6;
+      # };
 
       colors.primary = {
         background = "#000000";

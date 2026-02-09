@@ -1,0 +1,7 @@
+{ ... }:
+
+{
+    imports = [
+        ./swaywm.nix
+    ];
+}

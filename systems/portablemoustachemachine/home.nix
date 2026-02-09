@@ -1,25 +1,22 @@
-{ config, pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
-  imports = [
-    ../../modules/home/essentials.nix
-    ../../modules/home/optional.nix
-  ];
+    imports = [ ../../modules/home ];
 
 
-  home.username = "nishant";
-  home.homeDirectory = "/home/nishant";
+    home.username = "nishant";
+    home.homeDirectory = "/home/nishant";
 
-  home.packages = with pkgs; [
-    nerd-fonts.jetbrains-mono
+    home.packages = with pkgs; [
+        nerd-fonts.jetbrains-mono
 
 # terminal / tui
-    btop
-    fastfetch
-    htop
-  ];
+            btop
+            fastfetch
+            htop
+    ];
 
-  fonts.fontconfig.enable = true;
+    fonts.fontconfig.enable = true;
 
-  home.stateVersion = "25.05";
+    home.stateVersion = "25.05";
 }

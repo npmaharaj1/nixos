@@ -11,6 +11,8 @@
     hardware.graphics.enable32Bit = true;
 
     services = {
+        gnome.gnome-keyring.enable = true;
+        getty.helpLine = lib.mkForce "";
         nfs.server.enable = true;
         rpcbind.enable = true;
 

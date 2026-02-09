@@ -1,15 +1,17 @@
-{ config, libs, pkgs, inputs, ... }:
+{ lib, pkgs, ... }:
 
 {
     imports =
-        [ # Include the results of the hardware scan.
+        [ 
             ./hardware-configuration.nix
+        ]
+        ++ lib.filesystem.listFilesRecursive ../../modules/nixos/essentials/.;
+        # ++ lib.filesystem.listFilesRecursive ../../modules/core/extra/.;
 
-            ../../modules/nixos/tmux/tmux.nix
-
-            ../../modules/nixos/essentials.nix
-            ../../modules/nixos/optional.nix 
-        ];
+    hardware = {
+        cpu.intel.updateMicrocode = true;
+        graphics.enable = true;
+    };
 
     powerManagement.enable = true;
     systemd.sleep.extraConfig = ''
@@ -18,8 +20,6 @@
     '';
 
     boot.resumeDevice = "/dev/disk/by-uuid/80cdbd3a-5694-4f49-ac7b-b21b753a6429";
-
-    gamingMode.enable = false;
 
     # Use latest kernel.
     boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -37,17 +37,21 @@
         '';
     };
 
-    users.users.nishant = {
-        isNormalUser = true;
-        extraGroups = [ "wheel" "keyd" "video" ];
-        packages = with pkgs; [
-            fd
-            gnumake
-            luarocks
-            ripgrep
-            tree
-        ];
-        shell = pkgs.zsh;
+    security.polkit.enable = true;
+
+    users = {
+        users.nishant = {
+            isNormalUser = true;
+            extraGroups = [ "wheel" "keyd" "video" ];
+            packages = with pkgs; [
+                fd
+                    gnumake
+                    luarocks
+                    ripgrep
+                    tree
+            ];
+            shell = pkgs.zsh;
+        };
     };
 
     nixpkgs.config.allowUnfree = true;
@@ -59,84 +63,88 @@
         nix-ld.libraries = with pkgs; [
             icu
         ];
-        gamemode.enable = true;
+    };
 
-        steam = {
-            enable = true;
-            remotePlay.openFirewall = true;
-            dedicatedServer.openFirewall = true;
+    xdg.portal = {
+        enable = true;
+        wlr.enable = true;
+        extraPortals = with pkgs; [
+            xdg-desktop-portal-gtk
+            xdg-desktop-portal-wlr
+        ];
+        config = {
+            preferred = {
+                default = [ "gtk" ];
+                "org.freedesktop.impl.portal.Screenshot" = [ "wlr" ];
+                "org.freedesktop.impl.portal.ScreenCast" = [ "wlr" ];
+            };
         };
     };
 
-    environment.systemPackages = with pkgs; [
-        alacritty
-        bitwarden-desktop
-        brightnessctl
-        cachix
-        cargo
-        clang
-        feishin
-        ffuf
-        fuzzel
-        gcc
-        glib
-        grim
-        go
-        heroic
-        hplip
-        hyprpanel
-        hyprshot
-        icu
-        icu.dev
-        legcord
-        libglibutil
-        libnotify
-        linuxHeaders
-        libreoffice
-        live-server
-        lua51Packages.lua
-        maven
-        neovim
-        nfs-utils
-        nodejs_24
-        nwg-look
-        obsidian
-        openjdk
-        php
-        php84Packages.composer
-        pipe-viewer
-        pnpm
-        powerline-go
-        prismlauncher
-        pwvucontrol
-        python3
-        pywal
-        ruby
-        sqlite
-        sqlitestudio
-        swww
-        tesseract
-        tigervnc
-        trash-cli
-        tree
-        tree-sitter
-        unzip
-        vimv
-        waypaper
-        wget
-        wl-clipboard
-        zathura
-        zip
+    environment = {
+        pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
+        systemPackages = with pkgs; [
+            alacritty
+            bitwarden-desktop
+            brightnessctl
+            cargo
+            clang
+            cmatrix
+            feishin
+            file
+            gcc
+            glib
+            go
+            hplip
+            hyprshot
+            icu
+            icu.dev
+            intel-media-driver
+            libglibutil
+            libnotify
+            linuxHeaders
+            libva
+            live-server
+            lua51Packages.lua
+            mako
+            maven
+            neovim
+            nfs-utils
+            nodejs_24
+            nwg-look
+            obsidian
+            openjdk
+            php
+            php84Packages.composer
+            pipe-viewer
+            pnpm
+            pwvucontrol
+            python3
+            ruby
+            sqlite
+            sqlitestudio
+            trash-cli
+            tree
+            tree-sitter
+            unzip
+            vesktop
+            vimv
+            waypaper
+            wget
+            wl-clipboard
+            zathura
+            zip
 
-        llvmPackages_latest.lldb
-        llvmPackages_latest.libllvm
-        llvmPackages_latest.libcxx
-        llvmPackages_latest.clang
+            llvmPackages_latest.lldb
+            llvmPackages_latest.libllvm
+            llvmPackages_latest.libcxx
+            llvmPackages_latest.clang
 
-        unrar
-        vlc
-    ];
+            unrar
+            vlc
+        ];
 
+    };
     # List services that you want to enable:
 
     services = {
