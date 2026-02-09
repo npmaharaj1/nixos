@@ -102,6 +102,7 @@
                 nwg-look
                 obsidian
                 openjdk
+                openrgb-with-all-plugins
                 php
                 php84Packages.composer
                 pipe-viewer
