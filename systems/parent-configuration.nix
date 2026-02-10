@@ -109,7 +109,6 @@
                 pnpm
                 pwvucontrol
                 python3
-                pywal
                 ruby
                 sqlite
                 sqlitestudio

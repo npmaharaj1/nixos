@@ -23,8 +23,6 @@
 
         loginExtra = "if [[ $(tty) == '/dev/tty1' ]]; then sway; fi";
 
-        envExtra = "wal -qi $(grep bg /home/nishant/.config/sway/config | awk -F' ' '{print $2}')";
-
         oh-my-zsh = {
             enable = true;
             theme = "agnoster";

@@ -35,7 +35,7 @@
                 };
 
                 "*" = {
-                    bg = "/home/nishant/Projects/nixos/modules/home/wallpaper/tardis.jpg fill";
+                    bg = "/home/nishant/Projects/nixos/modules/home/wallpaper/thedoctorandclara0.jpg fill";
                 };
 
             };
