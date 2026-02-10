@@ -28,12 +28,14 @@
             output = {
                 eDP-1 = {
                     mode = "1920x1200@60Hz";
-                    bg = "/home/nishant/Projects/nixos/modules/home/wallpaper/thedoctorandclara0.jpg fill";
                 };
 
                 HDMI-A-1 = {
                     mode = "4096x2160@60Hz";
-                    bg = "/home/nishant/Projects/nixos/modules/home/wallpaper/thedoctorandclara0.jpg fill";
+                };
+
+                "*" = {
+                    bg = "/home/nishant/Projects/nixos/modules/home/wallpaper/tardis.jpg fill";
                 };
 
             };
