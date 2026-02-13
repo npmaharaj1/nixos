@@ -53,7 +53,7 @@
                 ];
 
                 "2" = [
-                    { app_id = "librewolf"; }
+                    { app_id = "brave-browser"; }
                 ];
 
                 "3" = [
