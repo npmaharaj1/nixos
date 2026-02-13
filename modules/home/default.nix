@@ -3,6 +3,7 @@
 {
     imports = [
         ./swaywm
+        ./brave
 
         ./alacritty.nix
         ./git.nix
@@ -11,7 +12,6 @@
         ./ssh.nix
         ./tmux.nix
         ./wluma.nix
-        # ./xdg.nix
         ./zoxide.nix
         ./zsh.nix
     ];

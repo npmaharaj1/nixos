@@ -70,6 +70,8 @@
     };
 
     environment = {
+        sessionVariables.NIXOS_OZONE_WL = "1";
+        etc."/brave/policies/managed/GroupPolicy.json".source = ../modules/home/brave/policies.json;
         pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
         systemPackages = with pkgs; [
             alacritty

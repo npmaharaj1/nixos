@@ -14,7 +14,7 @@
             terminal = "alacritty"; 
             startup = [
                 { command = "swaymsg workspace 1"; }
-                { command = "librewolf"; }
+                { command = "brave"; }
                 { command = "alacritty --class default_alacritty"; }
                 { command = "obsidian"; }
                 { command = "vesktop"; }
@@ -35,7 +35,7 @@
                 };
 
                 "*" = {
-                    bg = "/home/nishant/Projects/nixos/modules/home/wallpaper/thedoctorandclara0.jpg fill";
+                    bg = "/home/nishant/Projects/nixos/modules/home/wallpaper/civic.jpg fill";
                 };
 
             };
