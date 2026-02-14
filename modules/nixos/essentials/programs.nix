@@ -1,10 +1,11 @@
-{ pkgs, config, lib, inputs, ... }:
+{ ... }:
 
 {
     programs = {
         zsh.enable = true;
         thunar.enable = true;
         tmux.enable = true;
+        thunderbird.enable = true;
         localsend.enable = true;
         obs-studio.enable = true;
 

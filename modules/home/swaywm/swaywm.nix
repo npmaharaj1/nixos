@@ -17,6 +17,7 @@
                 { command = "brave"; }
                 { command = "alacritty --class default_alacritty"; }
                 { command = "obsidian"; }
+                { command = "thunderbird"; }
                 { command = "vesktop"; }
                 { command = "bitwarden"; }
                 { command = "openrgb --startminimized"; }
@@ -58,6 +59,10 @@
 
                 "3" = [
                     { app_id = "obsidian"; }
+                ];
+
+                "4" = [
+                    { app_id = "thunderbird"; }
                 ];
 
                 "10" = [
