@@ -14,12 +14,12 @@
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     networking = {
-            networkmanager.insertNameservers = [ 
-            "10.1.1.241"
-            "10.1.1.242"
-            "1.1.1.1"
-            "1.0.0.1"
-            ];
+            # networkmanager.insertNameservers = [ 
+            # "10.1.1.241"
+            # "10.1.1.242"
+            # "1.1.1.1"
+            # "1.0.0.1"
+            # ];
         dhcpcd.extraConfig = ''
             nohook resolv.conf
             '';

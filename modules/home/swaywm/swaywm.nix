@@ -123,8 +123,11 @@
                 "${config.wayland.windowManager.sway.config.modifier}+Shift+0" = "move container to workspace number 10; workspace 10";
             };
 
-            # Hide titlebar for each window
-            window.titlebar = false;
+            # Window optimizations
+            window = {
+                titlebar = false;
+                border = 0;
+            };
 
             bars = [
                 {

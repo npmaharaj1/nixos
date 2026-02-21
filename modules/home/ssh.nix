@@ -27,7 +27,7 @@
                 Port 443
 
             Host proxmox
-                Hostname 10.1.1.196
+                Hostname 10.1.1.195
                 User root
                 Port 22
 
