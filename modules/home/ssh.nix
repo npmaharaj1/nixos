@@ -31,18 +31,8 @@
                 User root
                 Port 22
 
-            Host pbs
-                Hostname 10.1.1.126
-                User root
-                Port 22
-
             Host rpi
                 Hostname 10.1.1.172
-                User root
-                Port 22
-
-            Host pve
-                Hostname 10.1.1.196
                 User root
                 Port 22
 

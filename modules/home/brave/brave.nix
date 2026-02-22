@@ -13,6 +13,7 @@
 
         commandLineArgs = [
             "--disable-features=AutofillSavePaymentMethods"
+            "--enable-features=TouchpadOverscrollHistoryNavigation"
         ];
     };
 }
