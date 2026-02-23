@@ -74,6 +74,7 @@
         etc."/brave/policies/managed/GroupPolicy.json".source = ../modules/home/brave/policies.json;
         pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
         systemPackages = with pkgs; [
+            activate-linux
             alacritty
                 bitwarden-desktop
                 brightnessctl
