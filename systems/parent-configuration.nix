@@ -6,20 +6,20 @@
     hardware.graphics.enable = true;
 
     swapDevices = [ {
-            device = "/.swapfile";
-            size = 32 * 1024;
+        device = "/.swapfile";
+        size = 32 * 1024;
     }];
 
 # Use latest kernel.
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     networking = {
-            # networkmanager.insertNameservers = [ 
-            # "10.1.1.241"
-            # "10.1.1.242"
-            # "1.1.1.1"
-            # "1.0.0.1"
-            # ];
+# networkmanager.insertNameservers = [ 
+# "10.1.1.241"
+# "10.1.1.242"
+# "1.1.1.1"
+# "1.0.0.1"
+# ];
         dhcpcd.extraConfig = ''
             nohook resolv.conf
             '';
@@ -75,7 +75,8 @@
         pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
         systemPackages = with pkgs; [
             activate-linux
-            alacritty
+                alacritty
+                arduino-cli
                 bitwarden-desktop
                 brightnessctl
                 cargo
@@ -106,6 +107,7 @@
                 obsidian
                 openjdk
                 openrgb-with-all-plugins
+                overskride
                 php
                 php84Packages.composer
                 pipe-viewer
