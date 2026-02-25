@@ -85,6 +85,7 @@
                 feishin
                 file
                 gcc
+                ghc
                 glib
                 go
                 hplip
