@@ -1,6 +1,8 @@
-{ lib, pkgs, ... }:
+{ lib, pkgs, pkgs-stable, pkgs-unstable, ... }:
 
-{
+let
+llvm = pkgs-stable.llvmPackages_latest;
+in {
     imports = [ ] ++ lib.filesystem.listFilesRecursive ../modules/nixos/essentials/.;
 
     hardware.graphics.enable = true;
@@ -31,7 +33,7 @@
         users.nishant = {
             isNormalUser = true;
             extraGroups = [ "wheel" "keyd" "video" ];
-            packages = with pkgs; [
+            packages = with pkgs-stable; [
                 fd
                     gnumake
                     luarocks
@@ -42,13 +44,11 @@
         };
     };
 
-    nixpkgs.config.allowUnfree = true;
-
     nix.settings.experimental-features = ["nix-command" "flakes"];
 
     programs = {
         nix-ld.enable = true;
-        nix-ld.libraries = with pkgs; [
+        nix-ld.libraries = with pkgs-stable; [
             icu
         ];
     };
@@ -56,7 +56,7 @@
     xdg.portal = {
         enable = true;
         wlr.enable = true;
-        extraPortals = with pkgs; [
+        extraPortals = with pkgs-stable; [
             xdg-desktop-portal-gtk
                 xdg-desktop-portal-wlr
         ];
@@ -73,8 +73,16 @@
         sessionVariables.NIXOS_OZONE_WL = "1";
         etc."/brave/policies/managed/GroupPolicy.json".source = ../modules/home/brave/policies.json;
         pathsToLink = ["/share/xdg-desktop-portal" "/share/applications"];
-        systemPackages = with pkgs; [
-            activate-linux
+
+
+
+        systemPackages =
+            ( with pkgs-unstable; [
+                ytmdesktop
+            ])
+            ++
+            ( with pkgs-stable; [
+                activate-linux
                 alacritty
                 arduino-cli
                 bitwarden-desktop
@@ -130,14 +138,16 @@
                 zathura
                 zip
 
-                llvmPackages_latest.lldb
-                llvmPackages_latest.libllvm
-                llvmPackages_latest.libcxx
-                llvmPackages_latest.clang
-
                 unrar
                 vlc
-                ];
+            ])
+            ++
+            ( with llvm; [
+                lldb
+                libllvm
+                libcxx
+                clang
+            ]);
 
     };
 # List services that you want to enable:

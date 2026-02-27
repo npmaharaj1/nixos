@@ -2,8 +2,9 @@
   description = "A simple NixOS flake";
 
   inputs = {
-# Official NixOS Source
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
+
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
@@ -12,7 +13,7 @@
 
   };
 
-  outputs = { nixpkgs, home-manager, ... } @ inputs: 
+  outputs = { nixpkgs, home-manager, nixpkgs-unstable, ... } @ inputs: 
   let
     username = "nishant";
     system="x86_64-linux";
@@ -22,8 +23,21 @@
     nixosConfigurations = {
 
       portablemoustachemachine = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = let
+            system = "x86_64-linux";
+        in {
+            inherit inputs;
+            pkgs-stable = import nixpkgs {
+                inherit system;
+                config.allowUnfree = true;
+            };
+
+            pkgs-unstable = import nixpkgs-unstable {
+                inherit system;
+                config.allowUnfree = true;
+            };
+        };
+
         modules = [
           ./systems/portablemoustachemachine/configuration.nix
 

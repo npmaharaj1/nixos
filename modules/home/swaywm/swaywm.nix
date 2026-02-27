@@ -17,6 +17,7 @@
                 { command = "brave"; }
                 { command = "alacritty --class default_alacritty"; }
                 { command = "obsidian"; }
+                { command = "ytmdesktop"; }
                 { command = "thunderbird"; }
                 { command = "vesktop"; }
                 { command = "bitwarden"; }
@@ -41,32 +42,36 @@
 
             };
 
-            # Assign workspace to output
+# Assign workspace to output
             workspaceOutputAssign = [
                 { workspace = "10"; output = "HDMI-A-1"; }
                 { workspace = "10"; output = "eDP-1"; }
             ];
 
-            # Automatic Workspace Assignments
+# Automatic Workspace Assignments
             assigns = {
                 "1" = [
-                    { app_id = "default_alacritty"; }
+                { app_id = "default_alacritty"; }
                 ];
 
                 "2" = [
-                    { app_id = "brave-browser"; }
+                { app_id = "brave-browser"; }
                 ];
 
                 "3" = [
-                    { app_id = "obsidian"; }
+                { app_id = "obsidian"; }
                 ];
 
                 "4" = [
-                    { app_id = "thunderbird"; }
+                { app_id = "thunderbird"; }
+                ];
+
+                "9" = [
+                    { app_id = "YouTube Music Desktop App"; }
                 ];
 
                 "10" = [
-                    { app_id = "vesktop"; }
+                { app_id = "vesktop"; }
                 ];
             };
 
@@ -77,7 +82,7 @@
                 "XF86MonBrightnessUp" = "exec brightnessctl s +5%";
                 "XF86MonBrightnessDown" = "exec brightnessctl s 5-%";
 
-                # Key Shortcuts
+# Key Shortcuts
                 "${config.wayland.windowManager.sway.config.modifier}+Return" = "exec ${config.wayland.windowManager.sway.config.terminal}";
                 "${config.wayland.windowManager.sway.config.modifier}+w" = "kill";
                 "${config.wayland.windowManager.sway.config.modifier}+e" = "exec thunar";
@@ -86,19 +91,19 @@
                 "${config.wayland.windowManager.sway.config.modifier}+v" = "split vertical; layout splith";
                 "${config.wayland.windowManager.sway.config.modifier}+Space" = "floating toggle";
 
-                # Focus Window
+# Focus Window
                 "${config.wayland.windowManager.sway.config.modifier}+h" = "focus left";
                 "${config.wayland.windowManager.sway.config.modifier}+j" = "focus down";
                 "${config.wayland.windowManager.sway.config.modifier}+k" = "focus up";
                 "${config.wayland.windowManager.sway.config.modifier}+l" = "focus right";
 
-                # Move Window
+# Move Window
                 "${config.wayland.windowManager.sway.config.modifier}+Mod1+h" = "move left";
                 "${config.wayland.windowManager.sway.config.modifier}+Mod1+j" = "move down";
                 "${config.wayland.windowManager.sway.config.modifier}+Mod1+k" = "move up";
                 "${config.wayland.windowManager.sway.config.modifier}+Mod1+l" = "move right";
 
-                # Focus Workspace
+# Focus Workspace
                 "${config.wayland.windowManager.sway.config.modifier}+1" = "workspace number 1";
                 "${config.wayland.windowManager.sway.config.modifier}+2" = "workspace number 2";
                 "${config.wayland.windowManager.sway.config.modifier}+3" = "workspace number 3";
@@ -110,7 +115,7 @@
                 "${config.wayland.windowManager.sway.config.modifier}+9" = "workspace number 9";
                 "${config.wayland.windowManager.sway.config.modifier}+0" = "workspace number 10";
 
-                # Move to Workspace
+# Move to Workspace
                 "${config.wayland.windowManager.sway.config.modifier}+Shift+1" = "move container to workspace number 1; workspace 1";
                 "${config.wayland.windowManager.sway.config.modifier}+Shift+2" = "move container to workspace number 2; workspace 2";
                 "${config.wayland.windowManager.sway.config.modifier}+Shift+3" = "move container to workspace number 3; workspace 3";
@@ -123,52 +128,52 @@
                 "${config.wayland.windowManager.sway.config.modifier}+Shift+0" = "move container to workspace number 10; workspace 10";
             };
 
-            # Window optimizations
+# Window optimizations
             window = {
                 titlebar = false;
                 border = 0;
             };
 
             bars = [
-                {
-                    position = "bottom";
-                    statusCommand = "/home/nishant/Projects/nixos/modules/home/swaywm/swaybar.sh";
-                    fonts = {
-                        names = [ "JetBrainsMonoNL Nerd Font Mono" ];
-                        style = "Regular";
+            {
+                position = "bottom";
+                statusCommand = "/home/nishant/Projects/nixos/modules/home/swaywm/swaybar.sh";
+                fonts = {
+                    names = [ "JetBrainsMonoNL Nerd Font Mono" ];
+                    style = "Regular";
+                };
+                colors = {
+                    background = "000000";
+                    statusline = "ffffff";
+
+                    focusedWorkspace = {
+                        border = "#4c7899";
+                        background = "#285577";
+                        text = "#ffffff";
                     };
-                    colors = {
-                        background = "000000";
-                        statusline = "ffffff";
 
-                        focusedWorkspace = {
-                            border = "#4c7899";
-                            background = "#285577";
-                            text = "#ffffff";
-                        };
-
-                        activeWorkspace = {
-                            border = "#333333";
-                            background = "#5f676a";
-                            text = "#ffffff";
-                        };
-
-                        inactiveWorkspace = {
-                            border = "#333333";
-                            background = "#222222";
-                            text = "#888888";
-                        };
-
-                        urgentWorkspace = {
-                            border = "#333333";
-                            background = "#222222";
-                            text = "#888888";
-                        };
+                    activeWorkspace = {
+                        border = "#333333";
+                        background = "#5f676a";
+                        text = "#ffffff";
                     };
-                }
+
+                    inactiveWorkspace = {
+                        border = "#333333";
+                        background = "#222222";
+                        text = "#888888";
+                    };
+
+                    urgentWorkspace = {
+                        border = "#333333";
+                        background = "#222222";
+                        text = "#888888";
+                    };
+                };
+            }
             ];
 
-            # Mouse settings
+# Mouse settings
             focus.followMouse = true;
             floating.modifier = "${config.wayland.windowManager.sway.config.modifier}";
             seat = {
@@ -192,6 +197,15 @@
                 };
             };
 
+        };
+    };
+
+    services.swaync = {
+        enable = true;
+        settings = {
+            timeout = 10;
+            timeout-low = 5;
+            timeout-critical = 10;
         };
     };
 }
