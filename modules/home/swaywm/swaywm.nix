@@ -17,7 +17,6 @@
                 { command = "brave"; }
                 { command = "alacritty --class default_alacritty"; }
                 { command = "obsidian"; }
-                { command = "ytmdesktop"; }
                 { command = "thunderbird"; }
                 { command = "vesktop"; }
                 { command = "bitwarden"; }
