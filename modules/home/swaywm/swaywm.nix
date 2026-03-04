@@ -202,8 +202,8 @@
     services.swaync = {
         enable = true;
         settings = {
-            timeout = 10;
-            timeout-low = 5;
+            timeout = 8;
+            timeout-low = 8;
             timeout-critical = 10;
         };
     };

@@ -84,7 +84,7 @@ in {
             ( with pkgs-stable; [
                 activate-linux
                 alacritty
-                arduino-cli
+                arduino
                 bitwarden-desktop
                 brightnessctl
                 cargo
