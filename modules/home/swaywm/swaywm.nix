@@ -17,7 +17,7 @@
                 { command = "brave"; }
                 { command = "alacritty --class default_alacritty"; }
                 { command = "obsidian"; }
-                { command = "thunderbird"; }
+                { command = "tutanota-desktop"; }
                 { command = "vesktop"; }
                 { command = "bitwarden"; }
                 { command = "openrgb --startminimized"; }
@@ -62,7 +62,7 @@
                 ];
 
                 "4" = [
-                { app_id = "thunderbird"; }
+                { app_id = "tutanota-desktop"; }
                 ];
 
                 "9" = [
@@ -202,8 +202,8 @@
     services.swaync = {
         enable = true;
         settings = {
-            timeout = 8;
-            timeout-low = 8;
+            timeout = 4;
+            timeout-low = 4;
             timeout-critical = 10;
         };
     };
