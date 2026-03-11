@@ -1,7 +1,7 @@
 { lib, pkgs, pkgs-stable, pkgs-unstable, ... }:
 
 let
-llvm = pkgs-stable.llvmPackages_latest;
+    llvm = pkgs-stable.llvmPackages_latest;
 in {
     imports = [ ] ++ lib.filesystem.listFilesRecursive ../modules/nixos/essentials/.;
 
@@ -16,6 +16,7 @@ in {
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
     networking = {
+
 # networkmanager.insertNameservers = [ 
 # "10.1.1.241"
 # "10.1.1.242"
@@ -129,6 +130,7 @@ in {
                 trash-cli
                 tree
                 tree-sitter
+                tutanota-desktop
                 unzip
                 vesktop
                 vimv

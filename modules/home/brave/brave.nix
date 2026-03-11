@@ -9,6 +9,7 @@
             "hlkljlkdinjnbfmclionhbefbnefcgll" # Microslop
             "gebbhagfogifgggkldgodflihgfeippi" # Return Youtube Dislike
             "enamippconapkdmgfgjchkhakpfinmaj" # DeArrow
+            "bfhkfdnddlhfippjbflipboognpdpoeh" # reMarkable
         ];
 
         commandLineArgs = [

@@ -51,8 +51,21 @@
       };
 
       moustachemachine = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
+        specialArgs = let
+            system = "x86_64-linux";
+        in {
+            inherit inputs;
+            pkgs-stable = import nixpkgs {
+                inherit system;
+                config.allowUnfree = true;
+            };
+
+            pkgs-unstable = import nixpkgs-unstable {
+                inherit system;
+                config.allowUnfree = true;
+            };
+        };
+
         modules = [
           ./systems/moustachemachine/configuration.nix
 
