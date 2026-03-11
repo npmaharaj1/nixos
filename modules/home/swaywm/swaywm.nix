@@ -207,4 +207,8 @@
             timeout-critical = 10;
         };
     };
+
+    programs.swaylock = {
+        enable = true;
+    };
 }

@@ -32,7 +32,7 @@ in {
     users = {
         users.nishant = {
             isNormalUser = true;
-            extraGroups = [ "wheel" "keyd" "video" ];
+            extraGroups = [ "wheel" "keyd" "video" "dialout" ];
             packages = with pkgs-stable; [
                 fd
                     gnumake
@@ -84,7 +84,7 @@ in {
             ( with pkgs-stable; [
                 activate-linux
                 alacritty
-                arduino
+                arduino-cli
                 bitwarden-desktop
                 brightnessctl
                 cargo
