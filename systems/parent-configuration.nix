@@ -105,6 +105,7 @@ in {
                 libglibutil
                 libnotify
                 linuxHeaders
+                libreoffice
                 libva
                 live-server
                 lua51Packages.lua
