@@ -137,6 +137,7 @@ in {
                 vimv
                 waypaper
                 wget
+                whatsapp-electron
                 wl-clipboard
                 zathura
                 zip
