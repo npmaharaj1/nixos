@@ -6,6 +6,8 @@
         ./hardware-configuration.nix
     ];
 
+    boot.kernelPackages = pkgs-stable.linuxPackages;
+
     services.xserver.videoDrivers = [ "nvidia" ];
     hardware.nvidia = {
         modesetting.enable = true;

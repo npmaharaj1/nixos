@@ -12,9 +12,6 @@ in {
         size = 32 * 1024;
     }];
 
-# Use latest kernel.
-    boot.kernelPackages = pkgs.linuxPackages_latest;
-
     networking = {
 
 # networkmanager.insertNameservers = [ 
