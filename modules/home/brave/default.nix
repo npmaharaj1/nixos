@@ -1,5 +1,7 @@
 { ... }:
 
 {
-    imports = [ ./brave.nix ];
+    imports = [
+        ./brave.nix
+    ];
 }

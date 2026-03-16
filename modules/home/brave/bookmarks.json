@@ -1,0 +1,102 @@
+{
+   "checksum": "67cfd964d0247aa0406933d87170d27c",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13415531475593842",
+            "date_last_used": "13417763373173205",
+            "guid": "abd5025a-1257-41fb-bf86-e802dd938e3f",
+            "id": "5",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "ANUHub",
+            "type": "url",
+            "url": "https://selfservice.sas.anu.edu.au/psc/sscsprod/EMPLOYEE/SA/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL"
+         }, {
+            "date_added": "13416298942895699",
+            "date_last_used": "13418117696334568",
+            "guid": "e7a977fb-208c-4b2a-b5ae-d8ea1ef95974",
+            "id": "7",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Edstem",
+            "type": "url",
+            "url": "https://edstem.org/au/dashboard"
+         }, {
+            "date_added": "13416376893989769",
+            "date_last_used": "13418102454888867",
+            "guid": "6473a524-dde7-4d2c-a3d5-683e01f86587",
+            "id": "9",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "Canvas",
+            "type": "url",
+            "url": "https://canvas.anu.edu.au/"
+         }, {
+            "date_added": "13417150448434716",
+            "date_last_used": "13418113526196541",
+            "guid": "6ac46fc9-f88d-4859-92ac-c25258499216",
+            "id": "12",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "MATLAB Grader",
+            "type": "url",
+            "url": "https://grader.mathworks.com/"
+         }, {
+            "date_added": "13417763415830946",
+            "date_last_used": "13418109968045427",
+            "guid": "50c0c6af-b460-4381-ad1a-3eb50c0f2e55",
+            "id": "14",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "MyTimetable",
+            "type": "url",
+            "url": "https://mytimetable.anu.edu.au/even/student?ss=7f19c0f903dc4667b21c2230e0496e91"
+         }, {
+            "date_added": "13417763652408382",
+            "date_last_used": "13418108482299216",
+            "guid": "68b0079e-754f-4a1d-b29d-0225afc0347d",
+            "id": "15",
+            "meta_info": {
+               "power_bookmark_meta": ""
+            },
+            "name": "OneDrive",
+            "type": "url",
+            "url": "https://anu365-my.sharepoint.com/"
+         } ],
+         "date_added": "13415527571199972",
+         "date_last_used": "0",
+         "date_modified": "13417763652408382",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Bookmarks",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13415527571199972",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other bookmarks",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13415527571199972",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile bookmarks",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

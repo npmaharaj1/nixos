@@ -1,4 +1,4 @@
-{ ... }:
+{ config, ... }:
 
 {
     programs.brave = {
@@ -16,5 +16,10 @@
             "--disable-features=AutofillSavePaymentMethods"
             "--enable-features=TouchpadOverscrollHistoryNavigation"
         ];
+    };
+
+    home.file."bookmarks.json" = {
+        source = ./bookmarks.json;
+        target = "${config.home.homeDirectory}/.config/BraveSoftware/Brave-Browser/Default/Bookmarks";
     };
 }
