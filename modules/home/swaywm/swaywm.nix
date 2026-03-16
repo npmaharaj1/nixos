@@ -11,19 +11,19 @@
 
             modifier = "Mod4";
             terminal = "alacritty"; 
-            startup = [
-                { command = "swaymsg workspace 1"; }
-                { command = "brave"; }
-                { command = "alacritty --class default_alacritty"; }
-                { command = "obsidian"; }
-                { command = "tutanota-desktop"; }
-                { command = "vesktop"; }
-                { command = "bitwarden"; }
-                { command = "openrgb --startminimized"; }
-                { command = "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"; }   # for GTK4 apps
-                { command = "gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'"; }   # for GTK3 apps
-                { command = "exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway"; }
-            ];
+            # startup = [
+            #     { command = "swaymsg workspace 1"; }
+            #     { command = "brave"; }
+            #     { command = "alacritty --class default_alacritty"; }
+            #     { command = "obsidian"; }
+            #     { command = "tutanota-desktop"; }
+            #     { command = "vesktop"; }
+            #     { command = "bitwarden"; }
+            #     { command = "openrgb --startminimized"; }
+            #     { command = "gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'"; }   # for GTK4 apps
+            #     { command = "gsettings set org.gnome.desktop.interface gtk-theme 'adw-gtk3'"; }   # for GTK3 apps
+            #     { command = "exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway"; }
+            # ];
 
             output = {
                 eDP-1 = {
