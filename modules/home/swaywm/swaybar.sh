@@ -1,5 +1,9 @@
 get_battery_level() {
-    upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk -F' ' '{print $2}'
+    acpi | awk -F',' '{print $2}'
+}
+
+get_battery_rate() {
+    upower -b | grep energy-rate: | awk -F' ' '{print $2$3}'
 }
 
 get_time_hour() {
@@ -47,5 +51,5 @@ do
         VOLUME=${MUTE_STATUS}
     fi
 
-    printf "|| V: %s | CPU: %s° | %s | %s | %s:%s | %s/%s ||\n" "${VOLUME}" $(get_cpu_temp) "${WIFI_OUTPUT}" $(get_battery_level) $(get_time_hour) $(get_time_minute) $(get_date_day) $(get_date_month)
+    printf "|| V: %s | CPU: %s° | %s | %s (%s) | %s:%s | %s/%s ||\n" "${VOLUME}" $(get_cpu_temp) "${WIFI_OUTPUT}" $(get_battery_level) $(get_battery_rate) $(get_time_hour) $(get_time_minute) $(get_date_day) $(get_date_month)
 done

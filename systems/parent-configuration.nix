@@ -80,6 +80,7 @@ in {
             ])
             ++
             ( with pkgs-stable; [
+                acpi
                 activate-linux
                 alacritty
                 arduino-cli
