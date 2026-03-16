@@ -21,7 +21,7 @@
             QT_QPA_PLATFORMTHEME = "qt6ct";
         };
 
-        loginExtra = "if [[ $(tty) == '/dev/tty1' ]]; then sway; fi";
+        loginExtra = "if [[ $(tty) == '/dev/tty1' ]]; then if [[ $(hostname) == 'moustachemachine' ]]; then sway --unsupported-gpu; elif [[ $(hostname) == 'portablemoustachemachine' ]]; then sway; else echo 'idk what to tell you man'; fi; fi";
 
         oh-my-zsh = {
             enable = true;

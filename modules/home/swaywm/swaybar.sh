@@ -35,7 +35,13 @@ get_mute() {
 }
 
 get_cpu_temp() {
-    cat /sys/class/thermal/thermal_zone9/temp | awk '{print $1/1000}'
+    if [[ $(hostname) == 'portablemoustachemachine' ]]; then
+        cat /sys/class/thermal/thermal_zone9/temp | awk '{print $1/1000}'
+    elif [[ $(hostname) == 'moustachemachine' ]]; then
+        cat /sys/class/thermal/thermal_zone1/temp | awk '{print $1/1000}'
+    else
+        echo "NaN"
+    fi
 }
 
 WIFI_OUTPUT=''
@@ -51,5 +57,11 @@ do
         VOLUME=${MUTE_STATUS}
     fi
 
-    printf "|| V: %s | CPU: %s° | %s | %s (%s) | %s:%s | %s/%s ||\n" "${VOLUME}" $(get_cpu_temp) "${WIFI_OUTPUT}" $(get_battery_level) $(get_battery_rate) $(get_time_hour) $(get_time_minute) $(get_date_day) $(get_date_month)
+    if [[ $(hostname) == 'portablemoustachemachine' ]]; then
+        printf "|| V: %s | CPU: %s° | %s | %s (%s) | %s:%s | %s/%s ||\n" "${VOLUME}" $(get_cpu_temp) "${WIFI_OUTPUT}" $(get_battery_level) $(get_battery_rate) $(get_time_hour) $(get_time_minute) $(get_date_day) $(get_date_month);
+    elif [[ $(hostname) == 'moustachemachine' ]]; then
+        printf "|| V: %s | CPU: %s° | %s | %s:%s | %s/%s ||\n" "${VOLUME}" $(get_cpu_temp) "${WIFI_OUTPUT}" $(get_time_hour) $(get_time_minute) $(get_date_day) $(get_date_month);
+    else
+        printf "|| V: %s |%s %s:%s | %s/%s ||\n" "${VOLUME}" "${WIFI_OUTPUT}" $(get_time_hour) $(get_time_minute) $(get_date_day) $(get_date_month);
+    fi
 done
