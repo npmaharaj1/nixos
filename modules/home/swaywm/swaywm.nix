@@ -1,5 +1,4 @@
 { config, ... }:
-
 {
     wayland.windowManager.sway = {
         enable = true;
@@ -89,6 +88,7 @@
                 "${config.wayland.windowManager.sway.config.modifier}+f" = "fullscreen";
                 "${config.wayland.windowManager.sway.config.modifier}+v" = "split vertical; layout splith";
                 "${config.wayland.windowManager.sway.config.modifier}+Space" = "floating toggle";
+                "${config.wayland.windowManager.sway.config.modifier}+Shift+Control+Mod1+l" = "exec swaymsg workspace 2 && brave --app-url 'linkedin.com'";
 
 # Focus Window
                 "${config.wayland.windowManager.sway.config.modifier}+h" = "focus left";

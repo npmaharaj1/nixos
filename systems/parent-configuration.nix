@@ -123,6 +123,7 @@ in {
                 pwvucontrol
                 python3
                 ruby
+                signal-cli
                 sqlite
                 sqlitestudio
                 trash-cli
