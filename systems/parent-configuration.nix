@@ -122,7 +122,6 @@ in {
                 pipe-viewer
                 pnpm
                 powertop
-                power-profiles-daemon
                 pwvucontrol
                 python3
                 ruby
