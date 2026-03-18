@@ -23,7 +23,7 @@ get_date_month() {
 }
 
 get_wifi() {
-    nmcli dev wifi list | grep "\*" | awk -F' ' '{print $3 " " "(" $8 ")"}'
+    nmcli dev wifi list | grep "\*       " | awk -F' ' '{print $3 " " "(" $8 ")"}'
 }
 
 get_volume() {
