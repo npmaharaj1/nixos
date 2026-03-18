@@ -10,7 +10,7 @@
             wheel = " sudo usb_modeswitch -v 046d -p c26d -M 0f00010142 -C 0x03 -m 01 -r 01  ";
             dev-commit = "git add . && git commit -m 'automated commit' && git push origin master";
             rm = "trash";
-            hackthemainframe = "nh os switch";
+            hackthemainframe = "nh os switch --update";
         };
 
         sessionVariables = {
