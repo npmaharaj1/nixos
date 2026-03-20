@@ -10,6 +10,11 @@
 
     hardware.cpu.intel.updateMicrocode = true;
 
+    swapDevices = [ {
+        device = "/.swapfile";
+        size = 32 * 1024;
+    }];
+
     powerManagement.enable = true;
     systemd.sleep.extraConfig = ''
         HibernateDelaySec=30m

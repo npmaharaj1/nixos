@@ -7,11 +7,6 @@ in {
 
     hardware.graphics.enable = true;
 
-    swapDevices = [ {
-        device = "/.swapfile";
-        size = 32 * 1024;
-    }];
-
     networking = {
 
 # networkmanager.insertNameservers = [ 
