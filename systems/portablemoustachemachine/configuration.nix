@@ -16,7 +16,13 @@
         SuspendState=mem
         '';
 
-    boot.kernelPackages = pkgs-stable.linuxPackages_latest;
+    boot = {
+        kernelPackages = pkgs-stable.linuxPackages_latest;
+        # loader.systemd-boot.extraFiles."windows.conf" = ''
+        #     title Windows 11
+        #     efi /boot/EFI/BOOT/BOOTX64.efi
+        # '';
+    };
 
     boot.resumeDevice = "/dev/disk/by-uuid/80cdbd3a-5694-4f49-ac7b-b21b753a6429";
 

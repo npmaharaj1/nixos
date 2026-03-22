@@ -84,6 +84,7 @@ in {
                 activate-linux
                 alacritty
                 arduino-cli
+                arduino-ide
                 bitwarden-desktop
                 brightnessctl
                 cargo
