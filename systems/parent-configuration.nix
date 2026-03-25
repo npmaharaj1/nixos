@@ -91,6 +91,7 @@ in {
                 ghc
                 glib
                 go
+                gparted
                 hplip
                 hyprshot
                 icu
