@@ -12,7 +12,7 @@
             modifier = "Mod4";
             terminal = "alacritty"; 
             startup = [
-                { command = "swaymsg workspace 1"; }
+                { command = "swaymsg workspace 2"; }
                 { command = "brave"; }
                 { command = "alacritty --class default_alacritty"; }
                 { command = "obsidian"; }
