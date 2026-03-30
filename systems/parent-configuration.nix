@@ -136,6 +136,7 @@ in {
                 wget
                 whatsapp-electron
                 wl-clipboard
+                wluma
                 zathura
                 zip
 
