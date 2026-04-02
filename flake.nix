@@ -30,16 +30,18 @@
                         pkgs-stable = import nixpkgs {
                             inherit system;
                             config.allowUnfree = true;
+                            config.allowBroken = true;
                         };
 
                         pkgs-unstable = import nixpkgs-unstable {
                             inherit system;
                             config.allowUnfree = true;
+                            config.allowBroken = true;
                         };
                     };
 
                     modules = [
-                        { nixpkgs = { inherit system; config.allowUnfree = true; }; }
+                        { nixpkgs = { inherit system; config.allowUnfree = true; config.allowBroken = true; }; }
                         ./systems/portablemoustachemachine/configuration.nix
 
                         home-manager.nixosModules.home-manager {
@@ -56,27 +58,25 @@
                         system = "x86_64-linux";
                         nixpkgsConfig = {
                             allowUnfree = true; 
+                            allowBroken = true;
                         };
                     in {
                         inherit inputs;
                         pkgs-stable = import nixpkgs {
                             inherit system;
                             config.allowUnfree = true;
+                            config.allowBroken = true;
                         };
 
                         pkgs-unstable = import nixpkgs-unstable {
                             inherit system;
                             config.allowUnfree = true;
+                            config.allowBroken = true;
                         };
-
-                        # pkgs = import nixpkgs {
-                        #     inherit system;
-                        #     config.allowUnfree = true;
-                        # };
                     };
 
                     modules = [
-                        { nixpkgs = { inherit system; config.allowUnfree = true; }; }
+                        { nixpkgs = { inherit system; config.allowUnfree = true; config.allowBroken = true; }; }
                         ./systems/moustachemachine/configuration.nix
 
                         home-manager.nixosModules.home-manager {
