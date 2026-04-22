@@ -20,8 +20,6 @@
             "udev.log_priority=3"
             "rd.systemd.show_status=auto"
             "plymouth.use-simpledrm"
-            "resume_offset=4161536.."
-            "mem_sleep_default=deep"
         ];
         # Hide the OS choice for bootloaders.
         # It's still possible to open the bootloader list by pressing any key

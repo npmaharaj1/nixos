@@ -92,7 +92,6 @@ in {
                 glib
                 go
                 gparted
-                haskellPackages.ghcup
                 hplip
                 hyprshot
                 icu
