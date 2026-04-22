@@ -20,7 +20,9 @@ in {
             '';
     };
 
-    security.polkit.enable = true;
+    security = {
+        polkit.enable = true;
+    };
 
     users = {
         users.nishant = {
