@@ -99,6 +99,7 @@ in {
                 icu
                 icu.dev
                 intel-media-driver
+                keepassxc
                 libglibutil
                 libnotify
                 linuxHeaders
@@ -121,6 +122,7 @@ in {
                 pipe-viewer
                 pnpm
                 powertop
+                prismlauncher
                 pwvucontrol
                 python3
                 ruby
@@ -136,7 +138,6 @@ in {
                 vimv
                 waypaper
                 wget
-                whatsapp-electron
                 wl-clipboard
                 wluma
                 zathura
